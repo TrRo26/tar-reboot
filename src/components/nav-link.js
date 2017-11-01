@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
-// import "./header-main.css"
-// import lofoten from "./lofoten.jpg"
+import "./nav-link.css"
 
 class NavButton extends Component {
 
     render() {
         return (
-            <div className="#">
-                <span>{this.props.name}</span>
+            <div className="nav-link">
+                <span><a href="#">{this.props.name}</a></span>
             </div>
         )
     }
