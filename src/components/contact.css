@@ -1,0 +1,10 @@
+.contact-icons {
+	position: fixed;
+	top: 300px;
+	font-size: 14px;
+}
+.contact-icon {
+	height: 50px;
+	width: 50px;
+	margin-bottom: 20px;
+}
