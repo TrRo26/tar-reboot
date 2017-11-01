@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
-// import "./header-main.css"
-// import lofoten from "./lofoten.jpg"
+import "./contact.css"
 
 class Contact extends Component {
 
     render() {
         return (
             <div>
-                <img src={this.props.icon} alt={"LinkedIn"} className="#"/>
+                <img src={this.props.icon} alt={"Get in touch"} className="contact-icon"/>
             </div>
         )
     }
