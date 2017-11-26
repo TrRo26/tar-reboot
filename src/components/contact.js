@@ -4,7 +4,7 @@ import "./contact.css"
 class Contact extends Component {
 
     render() {
-        return (
+        return(
             <div>
                 <a href={this.props.iconLink}>
                     <img src={this.props.icon} alt={"Get in touch"} className="contact-icon"/>

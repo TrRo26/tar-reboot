@@ -4,7 +4,7 @@ import "./nav-link.css"
 class NavButton extends Component {
 
     render() {
-        return (
+        return(
             <div className="nav-link">
                 <span><a href="#">{this.props.name}</a></span>
             </div>
