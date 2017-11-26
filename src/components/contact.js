@@ -6,7 +6,9 @@ class Contact extends Component {
     render() {
         return (
             <div>
-                <img src={this.props.icon} alt={"Get in touch"} className="contact-icon"/>
+                <a href={this.props.iconLink}>
+                    <img src={this.props.icon} alt={"Get in touch"} className="contact-icon"/>
+                </a>
             </div>
         )
     }

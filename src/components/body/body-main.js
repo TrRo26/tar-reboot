@@ -11,9 +11,9 @@ class BodyMain extends Component {
         return (
             <div className="body-frame">
                 <div className="contact-icons">
-                    <Contact icon={linkedin} />
-                    <Contact icon={github} />
-                    <Contact icon={email} />
+                    <Contact icon={linkedin} iconLink={'https://www.linkedin.com/in/travisroy'}/>
+                    <Contact icon={github} iconLink={'https://github.com/TrRo26'}/>
+                    <Contact icon={email} iconLink={'travis.roy26@gmail.com'}/>
                 </div>
             </div>
         )
