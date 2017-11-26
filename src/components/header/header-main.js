@@ -6,7 +6,7 @@ import NavButton from "../nav-link.js"
 class HeaderMain extends Component {
 
     render() {
-        return (
+        return(
             <div className="header-frame">
                 <span className="me">TRAVIS A. ROY</span>
                 <div className="page-links">
