@@ -8,7 +8,7 @@ import BodyMain from './components/body/body-main.js'
 class App extends Component {
   render() {
     return(
-      <div className="App">
+      <div className="App container">
         <HeaderMain />
         <BodyMain />
         <FooterMain />

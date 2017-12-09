@@ -1,5 +1,5 @@
 .body-frame {
-    height: 700px;
+    height: auto;
     border: 2px solid black;
     background: lightblue;
 }
