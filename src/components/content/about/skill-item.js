@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 // import " .css"
 
-class Skill extends Component {
+class SkillItem extends Component {
 
     render() {
         return(
@@ -17,4 +17,4 @@ class Skill extends Component {
     } 
 }
 
-export default Skill
+export default SkillItem
