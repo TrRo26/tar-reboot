@@ -8,6 +8,12 @@ import SkillItem from "../content/about/skill-item.js"
 import linkedin from "../../images/linkedin_icon.png"
 import github from "../../images/github_icon.png"
 import email from "../../images/email_icon.png"
+import {powerReviewsData, cciData} from "../content/about/experience-data.js"
+
+// info on separating imports and exports: https://stackoverflow.com/questions/29722270/import-modules-from-files-in-directory
+
+let powerReviews = powerReviewsData()
+let cci = cciData()
 
 class BodyMain extends Component {
 
@@ -18,13 +24,9 @@ class BodyMain extends Component {
                     <div className="col"> */}
 
                         <AboutMe />
-                        <ExpItem 
-                            expCompany="PowerReviews"
-                            expLocation="Chicago, IL"
-                            expPosition1="Technical Support Engineer"
-                            expDate1="July 2017"
-                            expContent="Blah Blah Blah"
-                        />
+                        <ExpItem {...powerReviews} />
+                        <ExpItem {...cci} />
+
                         <EduItem 
                             eduInstitute="DevBootcamp"
                             eduLocation="Chicago, IL"
