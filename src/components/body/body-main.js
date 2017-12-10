@@ -27,21 +27,29 @@ class BodyMain extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isExpMenuExpanded: false,
-            isEduMenuExpanded: false
+            expMenu: false,
+            eduMenu: false,
+            skillsMenu: false
         }
         this.handleExpClick = this.handleExpClick.bind(this);
         this.handleEduClick = this.handleEduClick.bind(this);
+        this.handleSkillsClick = this.handleSkillsClick.bind(this);
     }
 
     handleExpClick() {
         this.setState(prevState => ({
-            isExpMenuExpanded: !prevState.isExpMenuExpanded
+            expMenu: !prevState.expMenu
         }));
       }
     handleEduClick() {
         this.setState(prevState => ({
-            isEduMenuExpanded: !prevState.isEduMenuExpanded
+            eduMenu: !prevState.eduMenu
+        }));
+    }
+
+    handleSkillsClick() {
+        this.setState(prevState => ({
+            skillsMenu: !prevState.skillsMenu
         }));
     }
 
@@ -55,35 +63,37 @@ class BodyMain extends Component {
                     <div className="exp">
                         <h1>Current Employment</h1>
                         <ExpItem {...powerReviews} />
-                        <h1 onClick={this.handleExpClick}>Previous Employment</h1>
-                        <div className={"expanded-" + this.state.isExpMenuExpanded}>
+                        <h1 onClick={this.handleExpClick} style={{cursor:'pointer'}}>Previous Employment</h1>
+                        <div className={"expanded-" + this.state.expMenu}>
                             <ExpItem {...trilogyNW} />
                             <ExpItem {...devBootcampExp} />
                             <ExpItem {...cci} />
                         </div>
                     </div>
                     <div className="edu">
-                        <h1 onClick={this.handleEduClick}>Education</h1>
-                        <div className={"expanded-" + this.state.isEduMenuExpanded}>
+                        <h1 onClick={this.handleEduClick} style={{cursor:'pointer'}}>Education</h1>
+                        <div className={"expanded-" + this.state.eduMenu}>
                             <EduItem {...devBootcampEdu} />
                             <EduItem {...stockholmUni} />
                             <EduItem {...msu} />
                         </div>
                     </div>
                     <div className="skill">
-                        <h1>Skills</h1>
-                        <SkillItem skill="JavaScript" dataPercent="%50" />
-                        <SkillItem skill="JQuery" dataPercent="%40" />
-                        <SkillItem skill="React" dataPercent="%30" />
-                        <SkillItem skill="Jasmine" dataPercent="%25" />
-                        <SkillItem skill="Ruby" dataPercent="%40" />
-                        <SkillItem skill="Rails" dataPercent="%20" />
-                        <SkillItem skill="Sinatra" dataPercent="%60" />
-                        <SkillItem skill="RSpec" dataPercent="%40" />
-                        <SkillItem skill="Swift" dataPercent="%15" />
-                        <SkillItem skill="Xcode" dataPercent="%15" />
-                        <SkillItem skill="HTML" dataPercent="%80" />
-                        <SkillItem skill="CSS" dataPercent="%50" />
+                        <h1 onClick={this.handleSkillsClick} style={{cursor:'pointer'}}>Skills</h1>
+                        <div className={"expanded-" + this.state.skillsMenu}>
+                            <SkillItem skill="JavaScript" dataPercent="%50" />
+                            <SkillItem skill="JQuery" dataPercent="%40" />
+                            <SkillItem skill="React" dataPercent="%30" />
+                            <SkillItem skill="Jasmine" dataPercent="%25" />
+                            <SkillItem skill="Ruby" dataPercent="%40" />
+                            <SkillItem skill="Rails" dataPercent="%20" />
+                            <SkillItem skill="Sinatra" dataPercent="%60" />
+                            <SkillItem skill="RSpec" dataPercent="%40" />
+                            <SkillItem skill="Swift" dataPercent="%15" />
+                            <SkillItem skill="Xcode" dataPercent="%15" />
+                            <SkillItem skill="HTML" dataPercent="%80" />
+                            <SkillItem skill="CSS" dataPercent="%50" />
+                        </div>
                     </div>
                 </div>  
                 <div className="contact-icons">
@@ -97,3 +107,21 @@ class BodyMain extends Component {
 }
 
 export default BodyMain
+
+
+// ATTEMPTS TO COMBINE EVENT HANDLERS
+
+    // handleClick(menuName) {
+    //     return () => {
+    //         this.setState({
+    //             menuName: true
+    //              // this.state.menuName === true ? false : true
+    //         });
+    //     }
+    // }
+
+    // <div>
+    //     <div onClick={() => this.handleClick('div1')} className= { this.state.activeDiv === 'div1' ? "positive active" : "positive"}>Div1</div>
+    //     <div onClick={() => this.handleClick('div2')} className= { this.state.activeDiv === 'div2' ? "neutral active" : "neutral"}>Div2</div>
+    //     <div onClick={() => this.handleClick('div3')} className= { this.state.activeDiv === 'div3' ? "negative active" : "negative"}>Div3</div>
+    // </div>
