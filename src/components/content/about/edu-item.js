@@ -9,7 +9,7 @@ class EduItem extends Component {
 				{/* <Logo /> */}
 				<div>
 					<h2 className="edu-institute">{this.props.eduInstitute}</h2>
-					<h2 className="edu-location">{this.props.eduLocation}</h2>
+					<div className="edu-location">{this.props.eduLocation}</div>
 					<div></div>
 					<div className="edu-degree">{this.props.eduDegree}</div>
 					<span className="edu-dates">{this.props.eduDate}</span>

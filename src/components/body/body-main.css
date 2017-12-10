@@ -3,3 +3,27 @@
     border: 2px solid black;
     background: lightblue;
 }
+
+.content-frame {
+    margin: auto;
+}
+
+.about-me {
+
+}
+
+.exp {
+
+}
+
+.edu {
+
+}
+
+.skill {
+
+}
+
+.expanded-false {
+    display: none;
+}
