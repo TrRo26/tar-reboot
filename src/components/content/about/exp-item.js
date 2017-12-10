@@ -9,7 +9,7 @@ class ExpItem extends Component {
                 {/* <Logo /> */}
                 <div>
                     <h2 className="exp-company">{this.props.expCompany}</h2>
-                    <h2 className="exp-location">{this.props.expLocation}</h2>
+                    <div className="exp-location">{this.props.expLocation}</div>
                     <div></div>
                     <div className="exp-position">{this.props.expPosition1}</div>
                     <span className="exp-dates">{this.props.expDate1}</span>
