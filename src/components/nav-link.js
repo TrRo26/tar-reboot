@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import "./nav-link.css"
 
-class NavButton extends Component {
+class NavLink extends Component {
 
     render() {
         return(
@@ -12,4 +12,4 @@ class NavButton extends Component {
     }
 }
 
-export default NavButton
+export default NavLink

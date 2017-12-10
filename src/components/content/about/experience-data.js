@@ -1,5 +1,12 @@
+import PRLogo from "../../../images/pwr_logo.png"
+import NWSeal from "../../../images/nw_seal.png"
+// import TrilogyLogo from "../../../images/trilogy_logo.png"
+import DBCLogo from "../../../images/dbc_logo.jpeg"
+import CCILogo from "../../../images/cci_logo.png"
+
 export function powerReviewsData() {
     var powerReviewsData = {
+        expLogo: PRLogo,
         expCompany: "PowerReviews",
         expLocation: "Chicago, IL",
         expPosition1: "Technical Support Engineer",
@@ -11,7 +18,8 @@ export function powerReviewsData() {
 
 export function trilogyNWData() {
     var trilogyNWData = {
-        expCompany: "Northwestern Coding Bootcamp / Trilogy Education Services",
+        expLogo: NWSeal,
+        expCompany: "Northwestern Coding Bootcamp",
         expLocation: "Chicago, IL",
         expPosition1: "Teaching Assistant",
         expDate1: "Apr 2017 - Oct 2017",
@@ -22,6 +30,7 @@ export function trilogyNWData() {
 
 export function devBootcampExpData() {
     var devBootcampExpData = {
+        expLogo: DBCLogo,
         expCompany: "Dev Bootcamp",
         expLocation: "Chicago, IL",
         expPosition1: "Student, Full Stack Web Development",
@@ -33,6 +42,7 @@ export function devBootcampExpData() {
 
 export function cciData() {
     var cciData = {
+        expLogo: CCILogo,
         expCompany: "CCI Greenheart",
         expLocation: "Chicago, IL",
         expPosition1: "Operations Manager",

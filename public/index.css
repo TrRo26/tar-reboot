@@ -1,9 +1,6 @@
-.footer-frame {
-    padding: 20px;
-    height: 75px;
-    background: #3F3E3C;
-    color: #DDD9D4;
-    bottom: 0px;
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #9E453D;
 }
 
 /* 
@@ -11,3 +8,4 @@ Red - #9E4443, #9E453D (current), #984843
 Charcoal - #3E3E3E, #3C413D, #3F3E3C (current), #40403A, #423C38
 White - #D4E2D0, #CEE1CD, #DDD9D4 (current)
  */
+ 

@@ -61,9 +61,9 @@ class BodyMain extends Component {
                         <AboutMe />
                     </div>
                     <div className="exp">
-                        <h1>Current Employment</h1>
+                        <h1 className="section-header">What I'm up to now</h1>
                         <ExpItem {...powerReviews} />
-                        <h1 onClick={this.handleExpClick} style={{cursor:'pointer'}}>Previous Employment</h1>
+                        <h1 className="section-header" onClick={this.handleExpClick} style={{cursor:'pointer'}}>Previous Employment</h1>
                         <div className={"expanded-" + this.state.expMenu}>
                             <ExpItem {...trilogyNW} />
                             <ExpItem {...devBootcampExp} />
@@ -71,7 +71,7 @@ class BodyMain extends Component {
                         </div>
                     </div>
                     <div className="edu">
-                        <h1 onClick={this.handleEduClick} style={{cursor:'pointer'}}>Education</h1>
+                        <h1 className="section-header" onClick={this.handleEduClick} style={{cursor:'pointer'}}>Education</h1>
                         <div className={"expanded-" + this.state.eduMenu}>
                             <EduItem {...devBootcampEdu} />
                             <EduItem {...stockholmUni} />
@@ -79,7 +79,7 @@ class BodyMain extends Component {
                         </div>
                     </div>
                     <div className="skill">
-                        <h1 onClick={this.handleSkillsClick} style={{cursor:'pointer'}}>Skills</h1>
+                        <h1 className="section-header" onClick={this.handleSkillsClick} style={{cursor:'pointer'}}>Skills</h1>
                         <div className={"expanded-" + this.state.skillsMenu}>
                             <SkillItem skill="JavaScript" dataPercent="%50" />
                             <SkillItem skill="JQuery" dataPercent="%40" />
