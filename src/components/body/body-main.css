@@ -1,29 +1,37 @@
 .body-frame {
     height: auto;
-    border: 2px solid black;
-    background: lightblue;
+    background: #9E453D;
 }
-
 .content-frame {
     margin: auto;
 }
-
 .about-me {
-
+    margin-top: 60px;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    line-height: 2;
+    text-align: justify;
 }
-
+.section-header {
+    color: #DDD9D4;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
 .exp {
 
 }
-
 .edu {
 
 }
-
 .skill {
-
+    margin-bottom: 60px;
 }
-
 .expanded-false {
     display: none;
 }
+
+/* 
+Red - #9E4443, #9E453D (current), #984843
+Charcoal - #3E3E3E, #3C413D, #3F3E3C (current), #40403A, #423C38
+White - #D4E2D0, #CEE1CD, #DDD9D4 (current)
+ */

@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-// import " .css"
+import "./exp-item.css"
 
 class ExpItem extends Component {
 
     render() {
         return(
             <div>
-                {/* <Logo /> */}
                 <div>
+                    <img src={this.props.expLogo} alt={"Oh no! An image is missing!"} className="exp-icon"/>
                     <h2 className="exp-company">{this.props.expCompany}</h2>
                     <div className="exp-location">{this.props.expLocation}</div>
                     <div></div>
