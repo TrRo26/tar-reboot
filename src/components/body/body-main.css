@@ -29,6 +29,12 @@
 .expanded-false {
     display: none;
 }
+.box {
+    position: absolute;
+    border: 5px solid black;
+    height:50px;
+    width: 50px;
+}
 
 /* 
 Red - #9E4443, #9E453D (current), #984843

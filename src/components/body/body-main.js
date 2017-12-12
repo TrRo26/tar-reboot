@@ -11,6 +11,9 @@ import email from "../../images/email_icon.png"
 import {powerReviewsData, trilogyNWData, devBootcampExpData, cciData} from "../content/about/experience-data.js"
 import {devBootcampEduData, stockholmUniData, msuData} from "../content/about/education-data.js"
 
+import TestAnimation from "../test-animation.js"
+import TransitionGroup from 'react-addons-transition-group'
+
 // info on separating imports and exports: https://stackoverflow.com/questions/29722270/import-modules-from-files-in-directory
 
 let powerReviews = powerReviewsData()
@@ -23,18 +26,25 @@ let stockholmUni = stockholmUniData()
 let msu = msuData()
 
 class BodyMain extends Component {
-
+    
     constructor(props) {
         super(props)
         this.state = {
             expMenu: false,
             eduMenu: false,
-            skillsMenu: false
+            skillsMenu: false,
+            shouldShowBox: true
         }
         this.handleExpClick = this.handleExpClick.bind(this);
         this.handleEduClick = this.handleEduClick.bind(this);
         this.handleSkillsClick = this.handleSkillsClick.bind(this);
     }
+
+    toggleBox = () => {
+        this.setState({
+          shouldShowBox: !this.state.shouldShowBox
+        });
+    };
 
     handleExpClick() {
         this.setState(prevState => ({
@@ -60,10 +70,19 @@ class BodyMain extends Component {
                     <div className="about-me">
                         <AboutMe />
                     </div>
+
+                    <TransitionGroup>
+                        { this.state.shouldShowBox && <TestAnimation />}
+                    </TransitionGroup>
+
+                    <button className="toggle-btn" onClick={this.toggleBox}>
+                        toggle
+                    </button>
+
                     <div className="exp">
                         <h1 className="section-header">What I'm up to now</h1>
                         <ExpItem {...powerReviews} />
-                        <h1 className="section-header" onClick={this.handleExpClick} style={{cursor:'pointer'}}>Previous Employment</h1>
+                        <h1 className="section-header" onClick={this.handleExpClick} style={{cursor:'pointer'}}>Previous Experience</h1>
                         <div className={"expanded-" + this.state.expMenu}>
                             <ExpItem {...trilogyNW} />
                             <ExpItem {...devBootcampExp} />

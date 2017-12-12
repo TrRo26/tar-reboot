@@ -1,6 +1,6 @@
 import React, { Component, Image } from 'react'
 import "./header-main.css"
-import lofoten from "../../images/lofoten.jpg"
+// import lofoten from "../../images/lofoten.jpg"
 import NavLink from "../nav-link.js"
 
 class HeaderMain extends Component {
