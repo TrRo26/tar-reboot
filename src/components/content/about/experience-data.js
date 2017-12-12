@@ -10,7 +10,7 @@ export function powerReviewsData() {
         expLocation: "Chicago, Illinois",
         expPosition1: "Technical Support Engineer",
         expDate1: "July 2017 to Present",
-        expContent: "Blah Blah Blah"
+        expContent: "Problem solve, debug, troubleshoot. Refine. Repeat."
     }
     return powerReviewsData
 }
