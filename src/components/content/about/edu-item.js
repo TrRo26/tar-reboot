@@ -6,7 +6,6 @@ class EduItem extends Component {
     render() {
         return( 
 			<div>
-				{/* <Logo /> */}
 				<div>
 					<img src={this.props.eduSeal} alt={"Oh no! An image is missing!"} className="edu-seal"/>
 					<h2 className="edu-institute">{this.props.eduInstitute}</h2>

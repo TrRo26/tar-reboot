@@ -16,14 +16,15 @@ import SkillItem from "../content/about/skill-item.js"
 import {powerReviewsData, trilogyNWData, devBootcampExpData, cciData} from "../content/about/experience-data.js"
 import {devBootcampEduData, stockholmUniData, msuData} from "../content/about/education-data.js"
 import ExpAnimation from "../content/about/exp-animation.js"
+import EduAnimation from "../content/about/edu-animation.js"
 
 // info on separating imports and exports: https://stackoverflow.com/questions/29722270/import-modules-from-files-in-directory
 // ==================================================================
 
 let powerReviews = powerReviewsData()
-let devBootcampEdu = devBootcampEduData()
-let stockholmUni = stockholmUniData()
-let msu = msuData()
+// let devBootcampEdu = devBootcampEduData()
+// let stockholmUni = stockholmUniData()
+// let msu = msuData()
 
 class BodyMain extends Component {
     
@@ -61,9 +62,11 @@ class BodyMain extends Component {
         return(
             <div className="body-frame">
                 <div className="col-10 content-frame">
+
                     <div className="about-me">
                         <AboutMe />
                     </div>
+
                     <div className="exp">
                         <h1 className="section-header">- what i'm up to now -</h1>
                         <ExpItem {...powerReviews} />
@@ -71,20 +74,22 @@ class BodyMain extends Component {
                         <p className="tech">JavaScript | JQuery | React | Jasmine</p>
                         <p className="tech">Ruby | Rails | Sinatra | RSpec</p>
                         <p className="tech">Swift | Xcode | HTML | CSS </p>
-
-                        <h2 className="section-header" onClick={this.handleExpClick} style={{cursor:'pointer'}}>Previous Experience</h2>
-                        <TransitionGroup>
-                            { this.state.expMenu && <ExpAnimation />}
-                        </TransitionGroup>
                     </div>
-                    <div className="edu">
-                        <h2 className="section-header" onClick={this.handleEduClick} style={{cursor:'pointer'}}>Education</h2>
-                        <div className={"expanded-" + this.state.eduMenu}>
-                            <EduItem {...devBootcampEdu} />
-                            <EduItem {...stockholmUni} />
-                            <EduItem {...msu} />
+                    
+                    <div className="row">
+                        <div className="col">
+                            <h2 className="section-header" onClick={this.handleExpClick} style={{cursor:'pointer'}}>previous experience +</h2>
+                        </div>
+                        <div className="col">
+                            <h2 className="section-header" onClick={this.handleEduClick} style={{cursor:'pointer'}}>education +</h2>
                         </div>
                     </div>
+
+                    <TransitionGroup>
+                            { this.state.expMenu && <ExpAnimation />}
+                            { this.state.eduMenu && <EduAnimation />}
+                    </TransitionGroup>
+
                 </div>  
                 <div className="contact-icons">
                     <Contact icon={linkedin} iconLink={'https://www.linkedin.com/in/travisroy'}/>
