@@ -4,10 +4,10 @@ import TransitionGroup from 'react-addons-transition-group'
 import {TweenMax, Power2, TimelineLite} from "gsap"
 // COMPONENTS
 import EduItem from "./edu-item.js"
-import {msuData, stockholmUniData, devBootcampEduData} from "./education-data.js"
+import {msuData, suData, dbcEduData} from "./education-data.js"
 
-let dbc = devBootcampEduData()
-let su = stockholmUniData()
+let dbc = dbcEduData()
+let su = suData()
 let msu = msuData()
 
 class EduAnimation extends Component {

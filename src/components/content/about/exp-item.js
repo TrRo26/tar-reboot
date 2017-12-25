@@ -6,7 +6,7 @@ class ExpItem extends Component {
     render() {
         return(
             <div>
-                <div>
+                <div className="exp-container">
                     <img src={this.props.expLogo} alt={"Oh no! An image is missing!"} className="exp-icon"/>
                     <h2 className="exp-company">{this.props.expCompany}</h2>
                     <div className="exp-location">{this.props.expLocation}</div>

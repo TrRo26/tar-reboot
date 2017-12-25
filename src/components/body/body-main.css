@@ -1,6 +1,6 @@
 .body-frame {
     height: auto;
-    background: #9E453D;
+    background: #DDD9D4;
 }
 .content-frame {
     margin: auto;
@@ -13,7 +13,7 @@
     text-align: justify;
 }
 .section-header {
-    color: #DDD9D4;
+    color: #3F3E3C;
     margin-bottom: 50px;
     margin-top: 50px;
 }
