@@ -12,7 +12,7 @@ import Contact from "../contact.js"
 import AboutMe from "../content/about/about-me.js"
 import ExpItem from "../content/about/exp-item.js"
 import EduItem from "../content/about/edu-item.js"
-import SkillItem from "../content/about/skill-item.js"
+// import SkillItem from "../content/about/skill-item.js"
 import {powerReviewsData, trilogyNWData, devBootcampExpData, cciData} from "../content/about/experience-data.js"
 import {devBootcampEduData, stockholmUniData, msuData} from "../content/about/education-data.js"
 import ExpAnimation from "../content/about/exp-animation.js"
@@ -61,6 +61,7 @@ class BodyMain extends Component {
     render() {
         return(
             <div className="body-frame">
+                <div className="header-background-fix"></div>
                 <div className="col-10 content-frame">
 
                     <div className="about-me">
