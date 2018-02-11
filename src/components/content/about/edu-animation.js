@@ -3,14 +3,14 @@ import React, { Component } from 'react'
 import TransitionGroup from 'react-addons-transition-group'
 import {TweenMax, Power2, TimelineLite} from "gsap"
 // COMPONENTS
-import ExpItem from "./exp-item.js"
-import {trilogyNWData, devBootcampExpData, cciData} from "./experience-data.js"
+import EduItem from "./edu-item.js"
+import {msuData, suData, dbcEduData} from "./education-data.js"
 
-let trilogyNW = trilogyNWData()
-let devBootcampExp = devBootcampExpData()
-let cci = cciData()
+let dbc = dbcEduData()
+let su = suData()
+let msu = msuData()
 
-class ExpAnimation extends Component {
+class EduAnimation extends Component {
     componentWillEnter (callback) {
       const el = this.container;
       TweenMax.fromTo(el, 0.8, {y: 300, opacity: 0}, {y: 0, opacity: 1, onComplete: callback});
@@ -24,12 +24,12 @@ class ExpAnimation extends Component {
     render () {
       return (  
         <div className="exp-animation" ref={c => this.container = c}>
-            <ExpItem {...trilogyNW} />
-            <ExpItem {...devBootcampExp} />
-            <ExpItem {...cci} />
+            <EduItem {...dbc} />
+            <EduItem {...su} />
+            <EduItem {...msu} />
         </div>
       )
     }
   } 
 
-export default ExpAnimation
+export default EduAnimation

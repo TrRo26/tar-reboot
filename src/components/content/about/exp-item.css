@@ -1,4 +1,12 @@
-.exp-icon { 
+.exp-container {
+    border-radius: 5px;
+    padding-top: 18px;
+    margin-bottom: 50px;
+    padding-bottom: 1px;
+    background: #9E453D;
+    color: #DDD9D4;
+    }
+.exp-icon {
     position: absolute;
     left: 20px;
     margin-top: -18px;
