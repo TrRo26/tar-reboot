@@ -69,12 +69,10 @@ class BodyMain extends Component {
                     </div>
 
                     <div className="exp">
-                        <h1 className="section-header">- what i'm up to now -</h1>
-                        <ExpItem {...powerReviews} />
-                        <h2 className="section-header">- familiar technologies -</h2>
-                        <p className="tech">JavaScript | JQuery | React | Jasmine</p>
-                        <p className="tech">Ruby | Rails | Sinatra | RSpec</p>
-                        <p className="tech">Swift | Xcode | HTML | CSS </p>
+                        <h1 className="section-header">In the Present:</h1>
+                        <div>
+                            <ExpItem {...powerReviews} />
+                        </div>
                     </div>
                     
                     <div className="row">
@@ -90,6 +88,13 @@ class BodyMain extends Component {
                             { this.state.expMenu && <ExpAnimation />}
                             { this.state.eduMenu && <EduAnimation />}
                     </TransitionGroup>
+
+                    <div>
+                        <h2 className="section-header">- familiar technologies -</h2>
+                        <p className="tech">JavaScript | JQuery | React | Jasmine</p>
+                        <p className="tech">Ruby | Rails | Sinatra | RSpec</p>
+                        <p className="tech">Swift | Xcode | HTML | CSS </p>
+                    </div>
 
                 </div>  
                 <div className="contact-icons">
