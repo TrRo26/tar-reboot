@@ -9,6 +9,7 @@
 .body-frame {
     height: auto;
     background: #9E453D;
+    /* seriously fuck you git */
 }
 .content-frame {
     margin: auto;
@@ -21,12 +22,18 @@
     text-align: justify;
 }
 .section-header {
-    color: #3F3E3C;
+    color: #DDD9D4;
     margin-bottom: 50px;
     margin-top: 50px;
 }
 .tech {
     letter-spacing: 5px;
+}
+.exp {
+
+}
+.edu {
+
 }
 .skill {
     margin-bottom: 60px;
