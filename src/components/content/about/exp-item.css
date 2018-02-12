@@ -2,8 +2,9 @@
     border-radius: 5px;
     padding-top: 30px;
     margin-bottom: 30px;
-    background: #9E453D;
-    color: #DDD9D4;
+    border: 1px solid black;
+    /* background: #DDD9D4; */
+    color: black;
 }
 .exp-icon {
     position: absolute;
@@ -45,6 +46,6 @@
     margin-right: 30px;
     margin-bottom: 50px;
     padding-left: 90px;
-    padding-bottom: 30px;
+    /* padding-bottom: 10px; */
     text-align: justify;
 }

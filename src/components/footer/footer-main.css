@@ -1,9 +1,11 @@
 .footer-frame {
+    margin-top: 60px;
     padding: 20px;
     height: 100px;
     background: #3F3E3C;
     color: #DDD9D4;
     bottom: 0px;
+    border-radius: 3px;
 }
 
 /* 

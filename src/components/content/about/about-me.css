@@ -1,6 +1,6 @@
 .about-text {
     padding-top: 35px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 .thumb {
     height: 200px;
@@ -14,12 +14,29 @@
 .section-header {
     text-align: left !important;
     letter-spacing: 8px;
+    border-radius: 2px;
     padding-left: 20px;
     color: white;
-    border: 1px solid black;
     margin-bottom: 30px;
-    background: #3F3E3C;
+    background: #9E453D; /* #3F3E3C; */
+}
+.section-header.sh-small {
+    font-size: 22px;
+    height: 40px;
+    text-align: center !important;
+    padding: 5px;
+    margin-top: 30px;
 }
 .image-collection {
     margin-bottom: 85px;
+}
+.tech-list {
+    text-align: center;
+}
+.tech-list-header {
+    background: lightgrey;
+    width: 500px;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 15px;
 }

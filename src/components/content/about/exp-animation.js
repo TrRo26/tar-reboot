@@ -18,7 +18,7 @@ class ExpAnimation extends Component {
   
     componentWillLeave (callback) {
       const el = this.container;
-      TweenMax.fromTo(el, 0.3, {y: 0, opacity: 1}, {y: 300, opacity: 0, onComplete: callback});
+      TweenMax.fromTo(el, 0.5, {y: 0, opacity: 1}, {y: 300, opacity: 0, onComplete: callback});
     }
   
     render () {

@@ -69,7 +69,7 @@ class BodyMain extends Component {
                     </div>
 
                     <div className="exp">
-                        <h1 className="section-header">In the Present:</h1>
+                        <h1 className="section-header">what i'm up to now:</h1>
                         <div>
                             <ExpItem {...powerReviews} />
                         </div>
@@ -77,10 +77,10 @@ class BodyMain extends Component {
                     
                     <div className="row">
                         <div className="col">
-                            <h2 className="section-header" onClick={this.handleExpClick} style={{cursor:'pointer'}}>previous experience +</h2>
+                            <h2 className="section-header sh-small" onClick={this.handleExpClick} style={{cursor:'pointer'}}>previous experience +</h2>
                         </div>
                         <div className="col">
-                            <h2 className="section-header" onClick={this.handleEduClick} style={{cursor:'pointer'}}>education +</h2>
+                            <h2 className="section-header sh-small" onClick={this.handleEduClick} style={{cursor:'pointer'}}>education +</h2>
                         </div>
                     </div>
 
@@ -88,13 +88,6 @@ class BodyMain extends Component {
                             { this.state.expMenu && <ExpAnimation />}
                             { this.state.eduMenu && <EduAnimation />}
                     </TransitionGroup>
-
-                    <div>
-                        <h2 className="section-header">- familiar technologies -</h2>
-                        <p className="tech">JavaScript | JQuery | React | Jasmine</p>
-                        <p className="tech">Ruby | Rails | Sinatra | RSpec</p>
-                        <p className="tech">Swift | Xcode | HTML | CSS </p>
-                    </div>
 
                 </div>  
                 <div className="contact-icons">
