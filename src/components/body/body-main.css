@@ -13,37 +13,10 @@
 .content-frame {
     margin: auto;
 }
-.about-me {
+.body-title {
     margin-top: 120px;
     margin-bottom: 50px;
     letter-spacing: 2px;
     line-height: 2;
     text-align: justify;
 }
-.exp {
-    /* margin-top: 150px; */
-}
-.tech {
-    letter-spacing: 5px;
-}
-.edu {
-
-}
-.skill {
-    margin-bottom: 60px;
-}
-.expanded-false {
-    display: none;
-}
-.box {
-    position: absolute;
-    border: 5px solid black;
-    height:50px;
-    width: 50px;
-}
-
-/* 
-Red - #9E4443, #9E453D (current), #984843
-Charcoal - #3E3E3E, #3C413D, #3F3E3C (current), #40403A, #423C38
-White - #D4E2D0, #CEE1CD, #DDD9D4 (current)
- */
