@@ -3,14 +3,16 @@ import React, { Component } from 'react';
 import './App.css';
 import HeaderMain from './components/header/header-main.js'
 import FooterMain from './components/footer/footer-main.js'
-import BodyMain from './components/body/body-main.js'
+import AboutMain from './components/body/about-main.js'
+import PostsMain from './components/body/posts-main.js'
 
 class App extends Component {
   render() {
     return(
       <div className="App container">
         <HeaderMain />
-        <BodyMain />
+        {/* <PostsMain /> */}
+        <AboutMain />
         <FooterMain />
       </div>
     );

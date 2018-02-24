@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import TransitionGroup from 'react-addons-transition-group'
 // CSS
 import "./body-main.css"
+import "./about-main.css"
 // IMAGES
 import linkedin from "../../images/linkedin_icon.png"
 import github from "../../images/github_icon.png"
@@ -26,7 +27,7 @@ let powerReviews = powerReviewsData()
 // let stockholmUni = stockholmUniData()
 // let msu = msuData()
 
-class BodyMain extends Component {
+class AboutMain extends Component {
     
     constructor(props) {
         super(props)
@@ -64,7 +65,7 @@ class BodyMain extends Component {
                 <div className="header-background-fix"></div>
                 <div className="col-10 content-frame">
 
-                    <div className="about-me">
+                    <div className="body-title">
                         <AboutMe />
                     </div>
 
@@ -100,7 +101,7 @@ class BodyMain extends Component {
     }
 }
 
-export default BodyMain
+export default AboutMain
 
 
 // ATTEMPTS TO COMBINE EVENT HANDLERS
