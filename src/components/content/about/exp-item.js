@@ -1,4 +1,6 @@
+// PACKAGES
 import React, { Component } from 'react'
+// CSS
 import "./exp-item.css"
 
 class ExpItem extends Component {

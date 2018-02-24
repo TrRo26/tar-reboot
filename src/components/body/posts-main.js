@@ -16,7 +16,7 @@ class PostsMain extends Component {
                 <div className="header-background-fix"></div>
                 <div className="col-10 content-frame">
                     <div className="body-title">
-                        HEY THERE!!
+                        <h2>POST MAIN</h2>
                         <PostsGrid /> 
                     </div>
                 </div> 
