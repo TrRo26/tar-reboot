@@ -1,0 +1,8 @@
+.posts-grid-container {
+    border: 2px solid red;
+}
+.gridify * {
+    background: lightblue;
+    display: inline-block;
+    margin: 22px;
+}
