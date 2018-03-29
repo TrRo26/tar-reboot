@@ -1,7 +1,9 @@
+// IMAGES
 import stockholmIce from "../../../../images/posts/stockholm_ice.jpg"
 
 export function testPostData() {
     var testPostData = {
+        postLink: "",
         postMainImage: stockholmIce,
         postTitle: "TEST",
         postSubTitle: "Yep, this is a test post",

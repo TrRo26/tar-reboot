@@ -1,5 +1,6 @@
 // PACKAGES
 import React, { Component } from 'react'
+import { Route, Link } from 'react-router-dom'
 // CSS
 import "./body-main.css"
 import "./posts-main.css"
@@ -7,6 +8,11 @@ import "./posts-main.css"
     // import tr_garmisch from "../../../images/photos/tr_garmisch.jpg"
 // COMPONENTS
 import PostsGrid from "../content/posts/posts-grid.js"
+
+// JUST HERE AS EXAMPLE FROM APP.JS:
+// import ProjectsMain from './components/body/projects-main.js'
+// import PostsMain from './components/body/posts-main.js'
+// import FooterMain from './components/footer/footer-main.js'
 
 class PostsMain extends Component {
 
@@ -17,7 +23,11 @@ class PostsMain extends Component {
                 <div className="col-10 content-frame">
                     <div className="body-title">
                         <h2>POST MAIN</h2>
-                        <PostsGrid /> 
+                        <PostsGrid />
+                        {/* // JUST HERE AS EXAMPLE FROM APP.JS:
+                        <Route path="/" exact component={AboutMain}/>
+                        <Route path="/projects" component={ProjectsMain}/>
+                        <Route path="/posts" component={PostsMain}/> */}
                     </div>
                 </div> 
             </div>

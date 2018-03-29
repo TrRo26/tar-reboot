@@ -12,7 +12,7 @@ class ProjectsMain extends Component {
                 <div className="header-background-fix"></div>
                 <div className="col-10 content-frame">
                     <div className="body-title">
-                        <h2>PROJECTS, DUDE!</h2>                     
+                        <h2 className="temp-banner">- Projects coming soon -</h2>                     
                     </div>
                 </div> 
             </div>

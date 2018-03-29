@@ -35,3 +35,8 @@
 .post-sub-title {
     /* display: block; */
 }
+.post-date {
+    position: absolute;
+    left: 10px;
+    bottom: 0px;
+}
