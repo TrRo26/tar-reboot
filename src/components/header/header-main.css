@@ -1,6 +1,6 @@
 .header-frame {
     height: 250px;
-    max-height: 155px;
+    max-height: 155px; /* previously 155px */
     overflow: hidden;
 }
 .header-img {

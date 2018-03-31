@@ -1,6 +1,6 @@
 // PACKAGES
 import React, { Component } from 'react'
-import { Route, Link } from 'react-router-dom'
+import {BrowserRouter as Router, Route, Link } from 'react-router-dom'
 // CSS
 import './App.css';
 // IMAGES
@@ -11,6 +11,7 @@ import AboutMain from './components/body/about-main.js'
 import ProjectsMain from './components/body/projects-main.js'
 import PostsMain from './components/body/posts-main.js'
 import FooterMain from './components/footer/footer-main.js'
+import PostLayout from "./components/content/posts/post-layout.js"
 
 class App extends Component {
   render() {
@@ -18,9 +19,11 @@ class App extends Component {
       <div className="App container">
         <div>
           <HeaderMain />
-          <Route path="/" exact component={AboutMain}/>
-          <Route path="/projects" component={ProjectsMain}/>
-          <Route path="/posts" component={PostsMain}/>
+          <Route exact path="/" component={AboutMain} />
+          <Route path="/projects" component={ProjectsMain} />
+          <Route exact path="/posts" component={PostsMain} />
+            <Route path="/posts/test-post" component={PostLayout} />
+          {/* <Redirect to="/" /> */}
           <FooterMain />
         </div>
       </div>

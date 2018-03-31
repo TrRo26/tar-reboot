@@ -9,7 +9,6 @@ import "./posts-main.css"
 // COMPONENTS
 import PostsGrid from "../content/posts/posts-grid.js"
 import PostLayout from "../content/posts/post-layout.js"
-
 import {testPostData} from "../content/posts/2018/test-post.js"
 
 let testPost = testPostData()
@@ -29,16 +28,11 @@ class PostsMain extends Component {
                     <div className="body-title">
                         <h2>POST MAIN</h2>
                         
-                        {/* <PostsGrid /> */}
-                        
-                        <PostLayout {...testPost} />
+                        <PostsGrid />
 
-                        {/* // JUST HERE AS EXAMPLE FROM APP.JS:
-                        <Route path="/" exact component={AboutMain}/>
-                        <Route path="/projects" component={ProjectsMain}/>
-                        <Route path="/posts" component={PostsMain}/> */}
                     </div>
-                </div> 
+                </div>
+                <Route path="/posts/test-post" component={PostLayout}/>
             </div>
         )
     } 
