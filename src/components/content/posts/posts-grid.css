@@ -1,5 +1,6 @@
 .posts-grid-container {
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    padding-top: 78px;
 }
 .gridify * {
     display: inline-block;

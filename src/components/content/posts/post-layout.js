@@ -1,11 +1,12 @@
 // PACKAGES
 import React, { Component } from 'react'
 // CSS
-    import "./post-layout.css"
+import "./post-layout.css"
 
 class PostLayout extends Component {
 
     render() {
+        var data = this.props.location.state.data
         return(
 
             <div className="body-frame">
@@ -14,19 +15,17 @@ class PostLayout extends Component {
                     <div className="body-title">
                         
                         <div className="post-layout-container">
-                            THIS IS THE POST LAYOUT
+                        
                             <div className="post-main-image-container">
-                                <img src={this.props.postMainImage} alt={"Imagine a beautiful picture here"} className="post-main-image"/>
+                                <img src={data.postMainImage} alt={"Imagine a beautiful picture here"} className="post-main-image"/>
                             </div>
                             <div className="post-title-data">
-                                <h4 className="">{this.props.postTitle}</h4>
-                                <h6 className="">{this.props.postSubTitle}</h6>
-                                <h6 className="">{this.props.postDate}</h6>
-                                <p className="post-text">{this.props.postText}</p>
+                                <h4 className="">{data.postTitle}</h4>
+                                <h6 className="">{data.postSubTitle}</h6>
+                                <h6 className="">{data.postDate}</h6>
+                                <p className="post-text">{data.postText}</p>
                             </div>
                         </div>
-
-
 
                     </div>
                 </div> 
