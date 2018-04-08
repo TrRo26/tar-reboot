@@ -1,22 +1,35 @@
+// PACKAGES
+import React, { Component } from 'react'
 // IMAGES
 import strandvagan from "./strandvagan.jpg"
 
-export function blahPostData() {
-    var blahPostData = {
-        postPath: "/posts/stockholm_amusement-restaurants",
-        postMainImage: strandvagan,
-            postImageOne: "",
-            postImageTwo: "",
-            postImageThree: "",
-            postImageFour: "",
-            postImageFive: "",
-        postTitle: "SA - Restaurants",
-        postSubTitle: "Take a break",
-        postDate: "October 5, 2015",
-        postText: "Anyone who knows me is likely aware of my admiration for Sweden, especially its capital – Stockholm. After having been fortunate enough to live there for a shade over two years, I had to make the bittersweet move back to the United States at the behest of the Swedish government. While it’s good to be back in the land of 24 hour convenience, reasonably priced coffee and winter nights offering sunlight past 2pm, I find myself jumping at the slightest chance to talk up the virtues, of which there are many, of one of the worlds most beautiful cities."
-    }
-    return blahPostData
+// export function blahPostData() {
+
+//     var blahPostData = {
+//         postPath: "/posts/stockholm_amusement-restaurants",
+//         postStylesheet: "2015-10-5.css",
+//         postHTML: "./2015-10-5.html",
+//         postComponent: "",
+//         postMainImage: strandvagan,
+//         postTitle: "SA - Restaurants",
+//         postSubTitle: "Take a break",
+//         postDate: "October 5, 2015",
+//     }
+//         return blahPostData
+// }
+
+class SARestaurants extends Component {
+    
+    render() {
+        return(
+            <div>
+                <p>Stockholm Amusement - Restaurants</p>
+            </div>               
+        )
+    } 
 }
+
+export default SARestaurants
 
 
 // REST OF POST:

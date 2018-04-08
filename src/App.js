@@ -8,7 +8,6 @@ import HeaderMain from './components/header/header-main.js'
 import AboutMain from './components/body/about-main.js'
 import ProjectsMain from './components/body/projects-main.js'
 import PostsMain from './components/body/posts-main.js'
-import PostLayout from "./components/content/posts/post-layout.js"
 import FooterMain from './components/footer/footer-main.js'
 
 class App extends Component {
@@ -20,7 +19,7 @@ class App extends Component {
           <Route exact path="/" component={AboutMain} />
           <Route path="/projects" component={ProjectsMain} />
           <Route exact path="/posts" component={PostsMain} />
-          <Route path="/posts/:post" component={PostLayout} />
+          {/* <Route path="/posts/:post" component={PostLayout} /> */}
           <FooterMain />
         </div>
       </div>

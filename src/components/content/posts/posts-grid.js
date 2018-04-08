@@ -5,25 +5,75 @@ import "./posts-grid.css"
 // COMPONENTS
 import PostCard from "./post-card.js"
 // POSTS
-// NEED TO FIND MORE EFFICIENT WAY OF IMPORTING NEW POSTS
-import { testPostData } from "./2018/test-post.js"
-import { blahPostData } from "./2015/10-5-stockholm_amusement-restaurants/2015-10-5.js"
+import MoroccanIngenuity from "./2015/05-16-moroccan_ingenuity/2015-05-16.js"
+    import asAmBrands from "./2015/05-16-moroccan_ingenuity/as_am_brands.jpg"
+import SARestaurants from "./2015/10-05-sa_restaurants/2015-10-05.js"
+    import strandvagan from "./2015/10-05-sa_restaurants/strandvagan.jpg"
+import ShadowWind from "./2015/11-21-shadow_wind/2015-11-21.js"
+    import shadowWind from "./2015/11-21-shadow_wind/shadow_wind.png"
+import ChicagoBreweries from "./2015/12-26-chicago_breweries/2015-12-26.js"
+    import chicagoBeer from "./2015/12-26-chicago_breweries/chicago_beer.jpg"
 
-let testPost = testPostData()
-let stockholmAmusementRestaurants = blahPostData()
-
-let postCardData = [testPost, stockholmAmusementRestaurants]
+let posts = [] // REFACTOR BELOW POSTCARDs TO DYNAMICALLY RENDER??
 
 class PostsGrid extends Component {
+
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            showGrid: true,
+            showPost: false,
+            currentPost: null,
+        }
+        this.handleCardClick = this.handleCardClick.bind(this)
+    }
+
+    handleCardClick(stuff) {
+        this.setState(prevState => ({
+            showGrid: !prevState.showGrid,
+            showPost: !prevState.showPost,
+            currentPost: stuff
+        }))
+    }
     
     render() {
-        return(
-            <div className="posts-grid-container">
-                <div className="gridify">
-                    { postCardData.map( (stuff) => (<PostCard {...stuff} /> ))}
+        if (this.state.showGrid === true) {
+            return(
+                <div className="posts-grid-container">
+                    <div className="gridify">
+                        <PostCard 
+                            postTitle="Moroccan Ingenuity"
+                            postSubTitle="...with a touch of trademark infringement"
+                            postDate="May 16, 2015"
+                            postMainImage={asAmBrands}
+                            getPostComponent={() => this.handleCardClick(<MoroccanIngenuity />)}
+                        />
+                        <PostCard
+                            postTitle="Stockholm Amusement - Restaurants"
+                            postSubTitle="Take a break from wandering the mean streets of Sweden's capital and try one of these eight delicious eateries"
+                            postDate="October 5, 2015"
+                            postMainImage={strandvagan}
+                            getPostComponent={() => this.handleCardClick(<SARestaurants />)}
+                        />
+                        <PostCard
+                            postTitle="The Shadow of the Wind - A Review"
+                            postSubTitle="Some thoughts on the novel by Spanish writer Carlos Ruiz Zafón"
+                            postDate="November 11, 2015"
+                            postMainImage={shadowWind}
+                            getPostComponent={() => this.handleCardClick(<ShadowWind />)}
+                        />
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        } else if (this.state.showPost === true) {
+            return(
+                <div>
+                    {this.state.currentPost}
+                </div>
+            )
+      
+        }
     } 
 }
 
