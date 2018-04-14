@@ -8,15 +8,15 @@ class PostCard extends Component {
 
     render() {
         return(
-            <div className="col-12 post-container">
-                <div className="post-image-container">
-                    <img src={this.props.postMainImage} alt={"Imagine a beautiful picture here"} className="post-image"/>
+            <div className="col-12 card-container" onClick={this.props.getPostComponent}>
+                <div className="card-image-container">
+                        <img src={this.props.postMainImage} alt={"Imagine a beautiful picture here"} className="card-image"/>
                 </div>
-                <div className="post-heading-container">
+                <div className="card-heading-container">
                     {/* <Link to={{pathname: this.props.postPath, state: {data: this.props}}} className="post-title">{this.props.postTitle}</Link> */}
-                    <h4 className="post-title" onClick={this.props.getPostComponent}>{this.props.postTitle}</h4>
-                    <h6 className="post-sub-title">{this.props.postSubTitle}</h6>
-                    <h6 className="post-date">{this.props.postDate}</h6>
+                    <h4 className="card-title">{this.props.postTitle}</h4>
+                    <h6 className="card-sub-title">{this.props.postSubTitle}</h6>
+                    <h6 className="card-date">{this.props.postDate}</h6>
                 </div>
             </div>
         )

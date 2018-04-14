@@ -1,4 +1,4 @@
-.post-container {
+.card-container {
     /* border: 1px solid black; */
     height: 450px;
     width: 100%;
@@ -8,18 +8,18 @@
     padding: 0px;
     cursor: pointer;
 }
-.post-image-container {
+.card-image-container {
     /* border: 1px solid red; */
     height: 100%;
     max-width:60%;
     overflow: hidden;
 }
-.post-image {
+.card-image {
     height: 100%;
     margin-left: -50%;
     margin-right: -50%;
 }
-.post-heading-container {
+.card-heading-container {
     /* border: 1px solid black; */
     /* background: #9E453D; */
     color: #3F3E3C;
@@ -29,22 +29,22 @@
     max-width: 40%;
     padding: 10px;
 }
-.post-title {
+.card-title {
     /* letter-spacing: 0px; */
     font-weight: 900;
     padding-top: 20px;
 }
-.post-sub-title {
+.card-sub-title {
     text-align: left;
     padding: 25px;
 }
-.post-date {
+.card-date {
     position: absolute;
     right: 0px;
     bottom: 0px;
     padding: 15px;
 }
-.post-container:hover .post-image {
+.card-container:hover .card-image {
     -moz-transform: scale(1.05);
     -webkit-transform: scale(1.05);
     -o-transform: scale(1.05);
@@ -56,7 +56,7 @@
     -moz-transition:transform 3.05s ease-in-out;
     -ms-transition:transform 3.05s ease-in-out;
 }
-.post-container:not(:hover) .post-image {
+.card-container:not(:hover) .card-image {
     -moz-transform: scale(1);
     -webkit-transform: scale(1);
     -o-transform: scale(1);
