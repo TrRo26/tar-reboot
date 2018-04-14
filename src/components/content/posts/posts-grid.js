@@ -6,7 +6,7 @@ import "./posts-grid.css"
 import PostCard from "./post-card.js"
 // POSTS
 import MoroccanIngenuity from "./2015/05-16-moroccan_ingenuity/2015-05-16.js"
-    import asAmBrands from "./2015/05-16-moroccan_ingenuity/moroccan_palace.jpg"
+    import moroccanPalace from "./2015/05-16-moroccan_ingenuity/moroccan_palace.jpg"
 import SARestaurants from "./2015/10-05-sa_restaurants/2015-10-05.js"
     import strandvagan from "./2015/10-05-sa_restaurants/strandvagan.jpg"
 import ShadowWind from "./2015/11-21-shadow_wind/2015-11-21.js"
@@ -44,7 +44,7 @@ class PostsGrid extends Component {
                     <div className="gridify">
                         <PostCard
                             postTitle="The Shadow of the Wind - A Review"
-                            postSubTitle="Some thoughts on the novel by Spanish writer Carlos Ruiz Zafón"
+                            postSubTitle="A few critical thoughts on the novel by Spanish writer Carlos Ruiz Zafón"
                             postDate="November 11, 2015"
                             postMainImage={shadowWind}
                             getPostComponent={() => this.handleCardClick(<ShadowWind />)}
@@ -60,7 +60,7 @@ class PostsGrid extends Component {
                             postTitle="Moroccan Ingenuity"
                             postSubTitle="...with a touch of trademark infringement"
                             postDate="May 16, 2015"
-                            postMainImage={asAmBrands}
+                            postMainImage={moroccanPalace}
                             getPostComponent={() => this.handleCardClick(<MoroccanIngenuity />)}
                         />
                     </div>
