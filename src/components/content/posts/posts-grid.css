@@ -1,8 +1,11 @@
 .posts-grid-container {
-    /* border: 2px solid red; */
+    /* border: 2px solid black; */
     padding-top: 78px;
 }
 .gridify * {
     display: inline-block;
-    margin: 22px;
+    /* margin: 22px; */
+}
+.list {
+
 }

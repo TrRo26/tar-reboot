@@ -1,14 +1,37 @@
 // PACKAGES
 import React, { Component } from 'react'
+// CSS
+import "./2015-11-21.css"
 // IMAGES
 import shadowWind from "./shadow_wind.png"
 
 class ShadowWind extends Component {
 
+    postData() {
+        return({
+            postTitle: "The Shadow of the Wind - A Review",
+            postSubTitle: "Some thoughts on the novel by Spanish writer Carlos Ruiz Zafón",
+            postDate: "November 11, 2015",
+            postMainImage: shadowWind,
+            postPath: "",
+        })
+    }
+
     render() {
+        var data = this.postData()
         return(
             <div>
-                <p>The Shadow of the Wind - A Review</p>
+                <div className="post-layout-container">
+                    <div className="post-main-image-container">
+                        <img src={data.postMainImage} alt={"Imagine a beautiful picture here"} className="post-main-image"/>
+                    </div>
+                    <div className="post-title-data">
+                        <h4 className="">{data.postTitle}</h4>
+                        <h6 className="">{data.postSubTitle}</h6>
+                        <h6 className="">{data.postDate}</h6>
+                        <p className="post-text">{data.postText}</p>
+                    </div>    
+                </div>
             </div>
         )
     }    

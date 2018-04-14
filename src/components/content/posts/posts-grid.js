@@ -42,13 +42,13 @@ class PostsGrid extends Component {
             return(
                 <div className="posts-grid-container">
                     <div className="gridify">
-                        <PostCard 
-                            postTitle="Moroccan Ingenuity"
-                            postSubTitle="...with a touch of trademark infringement"
-                            postDate="May 16, 2015"
-                            postMainImage={asAmBrands}
-                            getPostComponent={() => this.handleCardClick(<MoroccanIngenuity />)}
-                        />
+                        <PostCard
+                            postTitle="The Shadow of the Wind - A Review"
+                            postSubTitle="Some thoughts on the novel by Spanish writer Carlos Ruiz Zafón"
+                            postDate="November 11, 2015"
+                            postMainImage={shadowWind}
+                            getPostComponent={() => this.handleCardClick(<ShadowWind />)}
+                        />                    
                         <PostCard
                             postTitle="Stockholm Amusement - Restaurants"
                             postSubTitle="Take a break from wandering the mean streets of Sweden's capital and try one of these eight delicious eateries"
@@ -56,12 +56,12 @@ class PostsGrid extends Component {
                             postMainImage={strandvagan}
                             getPostComponent={() => this.handleCardClick(<SARestaurants />)}
                         />
-                        <PostCard
-                            postTitle="The Shadow of the Wind - A Review"
-                            postSubTitle="Some thoughts on the novel by Spanish writer Carlos Ruiz Zafón"
-                            postDate="November 11, 2015"
-                            postMainImage={shadowWind}
-                            getPostComponent={() => this.handleCardClick(<ShadowWind />)}
+                        <PostCard 
+                            postTitle="Moroccan Ingenuity"
+                            postSubTitle="...with a touch of trademark infringement"
+                            postDate="May 16, 2015"
+                            postMainImage={asAmBrands}
+                            getPostComponent={() => this.handleCardClick(<MoroccanIngenuity />)}
                         />
                     </div>
                 </div>
