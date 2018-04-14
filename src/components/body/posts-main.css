@@ -2,3 +2,19 @@
     height: auto;
     background: white;
 }
+.right-sidebar {
+    position: relative;
+    float: right;
+    margin-top: 100px;
+    right: 0;
+}
+.right-sidebar p {
+    line-height: 10px;
+}
+.archives {
+    letter-spacing: 1px;
+    border-bottom: solid 2px #000000;
+    /* display: inline; */
+    padding-bottom: 7px;
+    margin-bottom: 20px;
+}

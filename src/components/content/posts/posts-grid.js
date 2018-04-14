@@ -6,11 +6,11 @@ import "./posts-grid.css"
 import PostCard from "./post-card.js"
 // POSTS
 import MoroccanIngenuity from "./2015/05-16-moroccan_ingenuity/2015-05-16.js"
-    import asAmBrands from "./2015/05-16-moroccan_ingenuity/as_am_brands.jpg"
+    import asAmBrands from "./2015/05-16-moroccan_ingenuity/moroccan_palace.jpg"
 import SARestaurants from "./2015/10-05-sa_restaurants/2015-10-05.js"
     import strandvagan from "./2015/10-05-sa_restaurants/strandvagan.jpg"
 import ShadowWind from "./2015/11-21-shadow_wind/2015-11-21.js"
-    import shadowWind from "./2015/11-21-shadow_wind/shadow_wind.png"
+    import shadowWind from "./2015/11-21-shadow_wind/shadow_wind_crop.png"
 import ChicagoBreweries from "./2015/12-26-chicago_breweries/2015-12-26.js"
     import chicagoBeer from "./2015/12-26-chicago_breweries/chicago_beer.jpg"
 

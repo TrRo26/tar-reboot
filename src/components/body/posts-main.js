@@ -13,14 +13,28 @@ class PostsMain extends Component {
         return(
             <div className="body-frame">
                 <div className="header-background-fix"></div>
-                <div className="col-10 content-frame">
-                    <div className="body-title">
-                        <PostsGrid />
+                    <div className="right-sidebar">
+                        <p className="archives">archives:</p>
+                        <p>2015</p>
+                        <p>2018</p>
                     </div>
-                </div>
+                    <div className="col-10 content-frame">
+                        <div className="body-title">
+                            <PostsGrid />
+                        </div>
+                    </div>
             </div>
         )
     } 
 }
 
 export default PostsMain
+
+// BLOG SITE EXAMPLES:
+
+// https://iso.500px.com/  <--- this one!!
+// https://design-milk.com/
+// https://pando.com/archives/
+
+// NOTES:
+// Example of slow zoom on a post picture: https://www.webdesignerdepot.com/

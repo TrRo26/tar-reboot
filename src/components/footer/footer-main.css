@@ -1,11 +1,13 @@
 .footer-frame {
+    position: absolute;
     margin-top: 60px;
     padding: 20px;
     height: 100px;
     background: #3F3E3C;
     color: #DDD9D4;
-    bottom: 0px;
-    border-radius: 3px;
+    left: 0;
+    right: 0;
+    width: 100%;
 }
 
 /* https://chrisbracco.com/css-sticky-footer-effect/ */
