@@ -44,7 +44,6 @@ class MoroccanIngenuity extends Component {
                                 </div>
                             </div>
                             <div style={{clear: 'left'}}></div>
-                            {/* <p className="post-text-p4">[Feel free to post in the comments if your up for guessing the eleven companies represented in the title photo]</p> */}
                         </div>
                     </div>    
                 </div>

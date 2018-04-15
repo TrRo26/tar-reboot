@@ -1,0 +1,75 @@
+.post-layout-container {
+    padding-top: 50px;
+    text-align: center;
+}
+.post-main-image-container {
+    margin-top: 30px;
+}
+.post-main-image {
+    height: 500px;
+}
+.post-title-data {
+}
+.post-title {
+    color: #9E453D;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 40px;
+}
+.post-subtitle {
+    font-size: 20px;
+    font-style: italic;
+}
+.post-date {
+    margin: auto;
+    margin-top: 50px;
+    line-height: 30px;
+    background: #9E453D;
+    color: white;
+    /* background: lightgrey; */
+    width: 280px;
+}
+.post-divider {
+    border: 0.5px solid black;
+    width: 600px;
+    margin: 60px auto;
+}
+.post-text-p1 {
+    text-align: left;
+    padding-bottom: 50px;
+}
+.post-text-all {
+    text-align: left;
+    padding: 0px 0px 50px 30px;
+}
+.post-image-container-all {
+    padding-bottom: 60px;
+}
+.post-image-all {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+    margin-top: 8px;
+    width: 100%;
+    height: auto;
+}
+.restaurant-title {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 0px;
+}
+.contact-info-all {
+    float:left;
+    padding-top: 25px;
+    padding-left: 10px;
+    text-align: left;
+    line-height: 8px;
+    color: #9E453D;
+    font-weight: bold;
+}
+.contact-info-padding {
+    padding: 15px 0px;
+}
+/* .post-text-p3 {
+    margin-left: 10px;
+} */
