@@ -17,6 +17,7 @@ class PostCard extends Component {
                     <h4 className="card-title">{this.props.postTitle}</h4>
                     <h6 className="card-sub-title">{this.props.postSubTitle}</h6>
                     <h6 className="card-date">{this.props.postDate}</h6>
+                    {/* <Link to="/posts/shadow-wind">CLICK ME</Link> */}
                 </div>
             </div>
         )
