@@ -6,7 +6,16 @@ import "./body-main.css"
 import "./posts-main.css"
 // COMPONENTS
 import PostsGrid from "../content/posts/posts-grid.js"
+// POSTS
 import ShadowWind from '../content/posts/2015/11-21-shadow_wind/2015-11-21';
+import SARestaurants from "../content/posts/2015/10-05-sa_restaurants/2015-10-05.js"
+import MoroccanIngenuity from "../content/posts/2015/05-16-moroccan_ingenuity/2015-05-16.js"
+
+const componentsCatalog = {
+    "shadow-wind": <ShadowWind key="3" />,
+    "stockholm-restaurants": <SARestaurants key="2" />,
+    "moroccan-ingenuity": MoroccanIngenuity,
+}
 
 class PostsMain extends Component {
 
@@ -14,26 +23,23 @@ class PostsMain extends Component {
         super(props)
 
         this.state = {
-            showGrid: true,
-            showPost: false,
             currentPost: null,
-            currentPostPath: null
         }
-        this.handleCardClick = this.handleCardClick.bind(this)
+        // this.handleCardClick = this.handleCardClick.bind(this)
     }
 
-    handleCardClick(post) {
-        this.setState(prevState => ({
-            showGrid: !prevState.showGrid,
-            showPost: !prevState.showPost,
-            currentPost: post,
-            currentPostPath: "/posts/shadow-wind"
-        }))
-        console.log("handle card click function was fired!")
-        this.props.history.push('/posts/shadow-wind');
-    }
+    // handleCardClick(post) {
+    //     this.setState(prevState => ({
+    //         currentPost: post,
+    //     }))
+    //     this.props.history.push("/posts/shadow-wind")
+    // }
 
     render() {
+        const url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
+        const VariableComponent = componentsCatalog[url]
+        console.log(url)
+
         return(
             <div className="body-frame">
                 <div className="header-background-fix"></div>
@@ -44,13 +50,9 @@ class PostsMain extends Component {
                     </div>
                     <div className="col-10 content-frame">
                         <div className="body-title">
-                            {/* <PostsGrid /> */}
 
-
-                            <Route exact path="/posts" render={ () => <PostsGrid getPostComponent={this.handleCardClick} /> } />
-                            <Route exact path="/posts/:post" component={ShadowWind} />
-
-
+                            <Route exact path="/posts" render={ () => <PostsGrid catalog={componentsCatalog} /> } />
+                            <Route exact path="/posts/:post" component={VariableComponent} />
 
                         </div>
                     </div>
@@ -60,6 +62,10 @@ class PostsMain extends Component {
 }
 
 export default PostsMain
+
+// getPostComponent={this.handleCardClick}
+// component={this.state.currentPost}
+
 
 // BLOG SITE EXAMPLES:
 
