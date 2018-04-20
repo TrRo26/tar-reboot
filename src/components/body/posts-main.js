@@ -5,16 +5,16 @@ import { Route, Link } from 'react-router-dom'
 import "./body-main.css"
 import "./posts-main.css"
 // COMPONENTS
-import PostsGrid from "../content/posts/posts-grid.js"
+import { PostsGrid, Post } from "../content/posts/posts-grid.js"
 // POSTS
-import ShadowWind from '../content/posts/2015/11-21-shadow_wind/2015-11-21';
+import ShadowWind from '../content/posts/2015/11-21-shadow_wind/2015-11-21'
 import SARestaurants from "../content/posts/2015/10-05-sa_restaurants/2015-10-05.js"
 import MoroccanIngenuity from "../content/posts/2015/05-16-moroccan_ingenuity/2015-05-16.js"
 
 const componentsCatalog = {
-    "shadow-wind": <ShadowWind key="3" />,
-    "stockholm-restaurants": <SARestaurants key="2" />,
-    "moroccan-ingenuity": MoroccanIngenuity,
+    "shadow-wind": <ShadowWind />,
+    "stockholm-restaurants": <SARestaurants />,
+    "moroccan-ingenuity": <MoroccanIngenuity />,
 }
 
 class PostsMain extends Component {
@@ -28,17 +28,31 @@ class PostsMain extends Component {
         // this.handleCardClick = this.handleCardClick.bind(this)
     }
 
+    // setPostCard() {
+    //     this.setState(
+    //         () => {
+    //             showCard: true
+    //         }
+    //     )
+    // }
+
+    // setPost() {
+    //     this.setState({
+    //         showCard: false
+    //     })
+    // }
+
     // handleCardClick(post) {
-    //     this.setState(prevState => ({
-    //         currentPost: post,
-    //     }))
+    //     this.setState(
+    //         prevState => ({
+    //             currentPost: post,
+    //         })
+    //     )
     //     this.props.history.push("/posts/shadow-wind")
     // }
 
     render() {
         const url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
-        const VariableComponent = componentsCatalog[url]
-        console.log(url)
 
         return(
             <div className="body-frame">
@@ -50,10 +64,8 @@ class PostsMain extends Component {
                     </div>
                     <div className="col-10 content-frame">
                         <div className="body-title">
-
                             <Route exact path="/posts" render={ () => <PostsGrid catalog={componentsCatalog} /> } />
-                            <Route exact path="/posts/:post" component={VariableComponent} />
-
+                            <Route exact path="/posts/:post" render={ () => <Post catalog={componentsCatalog} id={url} /> } />
                         </div>
                     </div>
             </div>

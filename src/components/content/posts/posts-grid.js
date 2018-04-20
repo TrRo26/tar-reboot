@@ -1,12 +1,10 @@
 // PACKAGES
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link, Redirect, withRouter } from 'react-router-dom'
 // CSS
 import "./posts-grid.css"
 // COMPONENTS
-import PostCard from "./post-card.js"
 
-class PostsGrid extends Component {
+export class PostsGrid extends Component {
 
     // constructor(props) {
     //     super(props)
@@ -44,7 +42,16 @@ class PostsGrid extends Component {
     } 
 }
 
-export default PostsGrid
+export class Post extends Component {
+    render() {
+        var post = this.props.catalog[this.props.id]
+        return(
+           <div>{post}</div>
+        )
+    }
+}
+
+// export default PostsGrid
                 
 
 // <PostCard

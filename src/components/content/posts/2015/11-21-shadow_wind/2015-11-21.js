@@ -1,10 +1,11 @@
 // PACKAGES
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 // CSS
 import "./2015-11-21.css"
 // IMAGES
 import shadowWind from "./shadow_wind.png"
+// COMPONENTS
+import PostCard from "../../post-card.js"
 
 class ShadowWind extends Component {
 
@@ -15,6 +16,12 @@ class ShadowWind extends Component {
             showCard: true,
         }
     }
+
+    // setPost() {
+    //     this.setState({
+    //         showCard: false
+    //     })
+    // }
 
     postData() {
         return({
@@ -29,23 +36,15 @@ class ShadowWind extends Component {
     render() {
         var data = this.postData()
 
-        if (this.state.showCard === true) {
+        // if (this.state.showCard === true) {
+
+            const endUrl = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
+
+        if (endUrl != data.postPath) {
             return(
-                <Link to={"/posts/" + data.postPath}>
-                    <div className="col-12 card-container">
-                        <div className="card-image-container">
-                                <img src={data.postMainImage} alt={"Imagine a beautiful picture here"} className="card-image"/>
-                        </div>
-                        <div className="card-heading-container">
-                            {/* <Link to={{pathname: this.props.postPath, state: {data: this.props}}} className="post-title">{this.props.postTitle}</Link> */}
-                            <h4 className="card-title">{data.postTitle}</h4>
-                            <h6 className="card-sub-title">{data.postSubTitle}</h6>
-                            <h6 className="card-date">{data.postDate}</h6>
-                        </div>
-                    </div>
-                </Link>
+                <PostCard postCardData={this.postData()} />   
             )
-        } else if (this.state.showCard === false) {
+        } else if (endUrl === data.postPath) {
             return(
                 <div>
                     <div className="post-layout-container">
