@@ -11,6 +11,7 @@ import email from "../../images/email_icon.png"
 // COMPONENTS
 import Contact from "../contact.js"
 import AboutMe from "../content/about/about-me.js"
+import AboutMeTech from "../content/about/about-me-tech.js"
 import ExpItem from "../content/about/exp-item.js"
 import EduItem from "../content/about/edu-item.js"
     // import SkillItem from "../content/about/skill-item.js"
@@ -32,65 +33,59 @@ class AboutMain extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            expMenu: false,
-            eduMenu: false,
-            skillsMenu: false,
+            aboutMeContainer: true,
+            aboutMeTechContainer: false,
+            expContainer: false,
+            eduContainer: false,
         }
-        this.handleExpClick = this.handleExpClick.bind(this);
-        this.handleEduClick = this.handleEduClick.bind(this);
-        this.handleSkillsClick = this.handleSkillsClick.bind(this);
     }
 
-    handleExpClick = () => {
+    handleCategoryClick(category) {
+        Object.keys(this.state).forEach(v => this.state[v] = false)
         this.setState({
-            expMenu: !this.state.expMenu
+            [category]: !this.state[category]
         })
     }
 
-    handleEduClick() {
-        this.setState(prevState => ({
-            eduMenu: !prevState.eduMenu
-        }));
-    }
-
-    handleSkillsClick() {
-        this.setState(prevState => ({
-            skillsMenu: !prevState.skillsMenu
-        }));
-    }
 
     render() {
         return(
             <div className="body-frame">
                 <div className="header-background-fix"></div>
                 <div className="col-10 content-frame">
-
-                    <div className="body-title">
-                        <AboutMe />
-                    </div>
-
-                    <div className="exp">
-                        <h1 className="section-header">what i'm up to now:</h1>
-                        <div>
-                            <ExpItem {...powerReviews} />
-                        </div>
-                    </div>
-                    
+                        
+            
+                        
                     <div className="row">
                         <div className="col">
-                            <h2 className="section-header sh-small" onClick={this.handleExpClick} style={{cursor:'pointer'}}>previous experience +</h2>
+                            <h2 className="section-header sh-small" onClick={(category) => this.handleCategoryClick('aboutMeContainer')} style={{cursor:'pointer'}}>About Me +</h2>
                         </div>
                         <div className="col">
-                            <h2 className="section-header sh-small" onClick={this.handleEduClick} style={{cursor:'pointer'}}>education +</h2>
+                            <h2 className="section-header sh-small" onClick={(category) => this.handleCategoryClick('aboutMeTechContainer')} style={{cursor:'pointer'}}>About Me Tech +</h2>
+                        </div>
+                        <div className="col">
+                            <h2 className="section-header sh-small" onClick={(category) => this.handleCategoryClick('expContainer')} style={{cursor:'pointer'}}>previous experience +</h2>
+                        </div>
+                        <div className="col">
+                            <h2 className="section-header sh-small" onClick={(category) => this.handleCategoryClick('eduContainer')} style={{cursor:'pointer'}}>education +</h2>
                         </div>
                     </div>
 
-                    <TransitionGroup>
-                            { this.state.expMenu && <ExpAnimation />}
-                            { this.state.eduMenu && <EduAnimation />}
-                    </TransitionGroup>
 
-                </div>  
+                    <TransitionGroup>
+                        { this.state.aboutMeContainer && <AboutMe /> }
+                        { this.state.aboutMeTechContainer && <AboutMeTech /> }
+                        { this.state.expContainer && <ExpAnimation /> }
+                        { this.state.eduContainer && <EduAnimation /> }
+                    </TransitionGroup>
+                        
+                        
+                    {/* <ExpItem {...powerReviews} /> */}
+                        
+                        
+                      
+                </div>
+
                 <div className="contact-icons">
                     <Contact icon={linkedin} iconLink={'https://www.linkedin.com/in/travisroy'}/>
                     <Contact icon={github} iconLink={'https://github.com/TrRo26'}/>
@@ -106,11 +101,11 @@ export default AboutMain
 
 // ATTEMPTS TO COMBINE EVENT HANDLERS
 
-    // handleClick(menuName) {
+    // handleClick(ContainerName) {
     //     return () => {
     //         this.setState({
-    //             menuName: true
-    //              // this.state.menuName === true ? false : true
+    //             ContainerName: true
+    //              // this.state.ContainerName === true ? false : true
     //         });
     //     }
     // }
