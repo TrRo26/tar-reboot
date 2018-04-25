@@ -7,18 +7,21 @@ import "./post-card-list.css"
 class PostCard extends Component {
 
     render() {
+        var data = this.props.postCardData
+        
         return(
-            <div className="col-12 card-container" onClick={this.props.getPostComponent}>
-                <div className="card-image-container">
-                        <img src={this.props.postMainImage} alt={"Imagine a beautiful picture here"} className="card-image"/>
+            <Link to={"/posts/" + data.postPath}>
+                <div className="col-12 card-container">
+                    <div className="card-image-container">
+                        <img src={data.postMainImage} alt={"Imagine a beautiful picture here"} className="card-image"/>
+                    </div>
+                    <div className="card-heading-container">
+                        <h4 className="card-title">{data.postTitle}</h4>
+                        <h6 className="card-sub-title">{data.postSubTitle}</h6>
+                        <h6 className="card-date">{data.postDate}</h6>
+                    </div>
                 </div>
-                <div className="card-heading-container">
-                    {/* <Link to={{pathname: this.props.postPath, state: {data: this.props}}} className="post-title">{this.props.postTitle}</Link> */}
-                    <h4 className="card-title">{this.props.postTitle}</h4>
-                    <h6 className="card-sub-title">{this.props.postSubTitle}</h6>
-                    <h6 className="card-date">{this.props.postDate}</h6>
-                </div>
-            </div>
+            </Link>
         )
     } 
 }

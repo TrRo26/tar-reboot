@@ -22,21 +22,21 @@ class AboutMe extends Component {
                         <img src={tr_oregon} className="thumb" data-toggle="modal" data-target=".modal-two" />
                         <img src={tr_wrigley} className="thumb" data-toggle="modal" data-target=".modal-three" />
 
-                        <div className="modal fade modal-one" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div className="modal fade modal-one" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                             <div className="modal-dialog modal-lg">
                                 <div className="modal-content">
                                     <img src={tr_garmisch} className="open-modal"/>
                                 </div>
                             </div>
                         </div>
-                        <div className="modal fade modal-two" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div className="modal fade modal-two" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                             <div className="modal-dialog modal-lg">
                                 <div className="modal-content">
                                     <img src={tr_oregon} className="open-modal"/>
                                 </div>
                             </div>
                         </div>
-                        <div className="modal fade modal-three" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div className="modal fade modal-three" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                             <div className="modal-dialog modal-lg">
                                 <div className="modal-content">
                                     <img src={tr_wrigley} className="open-modal"/>
