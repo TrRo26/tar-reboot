@@ -6,6 +6,15 @@ import "./post-card-list.css"
 
 class PostCard extends Component {
 
+    displayTags(pt) {
+        var pt = pt.sort()
+        var tags = []
+        for(var i=0; i<pt.length; i++) {
+            tags.push(<span className="card-tag">{pt[i]}</span>)
+        }
+        return tags
+    }
+
     render() {
         var data = this.props.postCardData
         
@@ -18,6 +27,7 @@ class PostCard extends Component {
                     <div className="card-heading-container">
                         <h4 className="card-title">{data.postTitle}</h4>
                         <h6 className="card-sub-title">{data.postSubTitle}</h6>
+                        <div className="card-tags">{this.displayTags(data.postTags)}</div>
                         <h6 className="card-date">{data.postDate}</h6>
                     </div>
                 </div>

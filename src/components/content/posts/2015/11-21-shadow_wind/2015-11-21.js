@@ -29,16 +29,14 @@ class ShadowWind extends Component {
             postSubTitle: "A few critical thoughts on the novel by Spanish writer Carlos Ruiz Zafón",
             postDate: "November 11, 2015",
             postMainImage: shadowWind,
+            postTags: ["literature"],
             postPath: "shadow-wind"
         })
     }
 
     render() {
         var data = this.postData()
-
-        // if (this.state.showCard === true) {
-
-            const endUrl = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
+        const endUrl = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
 
         if (endUrl != data.postPath) {
             return(

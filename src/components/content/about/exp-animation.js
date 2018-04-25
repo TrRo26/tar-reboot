@@ -1,10 +1,10 @@
 // PACKAGES
 import React, { Component } from 'react'
 import TransitionGroup from 'react-addons-transition-group'
-import {TweenMax, Power2, TimelineLite} from "gsap"
+import { TweenMax, Power2, TimelineLite } from "gsap"
 // COMPONENTS
 import ExpItem from "./exp-item.js"
-import {trilogyNWData, devBootcampExpData, cciData} from "./experience-data.js"
+import { trilogyNWData, devBootcampExpData, cciData } from "./experience-data.js"
 
 let trilogyNW = trilogyNWData()
 let devBootcampExp = devBootcampExpData()

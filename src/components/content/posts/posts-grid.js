@@ -43,8 +43,10 @@ export class PostsGrid extends Component {
 }
 
 export class Post extends Component {
+
     render() {
         var post = this.props.catalog[this.props.id]
+        
         return(
            <div>{post}</div>
         )

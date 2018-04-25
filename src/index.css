@@ -1,5 +1,11 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background: white;
 }
+
+/* 
+Red - #9E4443, #9E453D (current), #984843
+Charcoal - #3E3E3E, #3C413D, #3F3E3C (current), #40403A, #423C38
+White - #D4E2D0, #CEE1CD, #DDD9D4 (current)
+ */
+ 
