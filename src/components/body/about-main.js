@@ -94,7 +94,7 @@ class AboutMain extends Component {
                 <div className="contact-icons">
                     <Contact icon={linkedin} iconLink={'https://www.linkedin.com/in/travisroy'}/>
                     <Contact icon={github} iconLink={'https://github.com/TrRo26'}/>
-                    <Contact icon={email} iconLink={'travis.roy26@gmail.com'}/>
+                    <Contact icon={email} iconLink={'mailto:travis.roy26@gmail.com'}/>
                 </div>
             </div>
         )

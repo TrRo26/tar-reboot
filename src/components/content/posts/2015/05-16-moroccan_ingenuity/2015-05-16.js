@@ -24,6 +24,7 @@ class MoroccanIngenuity extends Component {
             postSubTitle: "...with a touch of trademark infringement",
             postDate: "May 16, 2015",
             postMainImage: moroccanPalace,
+            postTags: ["travel"],
             postPath: "moroccan-ingenuity",
         })
     }
@@ -31,7 +32,7 @@ class MoroccanIngenuity extends Component {
     render() {
         var data = this.postData()
         const endUrl = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
-        
+
         if (endUrl != data.postPath) {
             return(
                 <PostCard postCardData={this.postData()} />   

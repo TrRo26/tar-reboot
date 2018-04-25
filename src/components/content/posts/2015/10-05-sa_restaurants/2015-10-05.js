@@ -31,6 +31,7 @@ class SARestaurants extends Component {
             postSubTitle: "Take a break from wandering the mean streets of Sweden's capital and try one of these eight delicious eateries",
             postDate: "October 05, 2015",
             postMainImage: strandvagan,
+            postTags: ["travel", "food"],
             postPath: "stockholm-restaurants",
         })
     }
@@ -38,7 +39,7 @@ class SARestaurants extends Component {
     render() {
         var data = this.postData()
         const endUrl = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
-        
+
         if (endUrl != data.postPath) {
             return(
                 <PostCard postCardData={this.postData()} />   
