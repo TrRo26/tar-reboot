@@ -1,6 +1,7 @@
 // PACKAGES
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import TransitionGroup from 'react-addons-transition-group'
 // CSS
 import './App.css';
 // COMPONENTS
@@ -18,7 +19,9 @@ class App extends Component {
         <Router>
           <div>
             <HeaderMain />
+            <TransitionGroup>
             <Route exact path="/" component={AboutMain} />
+            </TransitionGroup>
             <Route exact path="/projects" component={ProjectsMain} />
             <Route path="/posts" component={PostsMain} />
             {/* <Route exact path="/posts/shadow-wind" component={ShadowWind} /> */}
