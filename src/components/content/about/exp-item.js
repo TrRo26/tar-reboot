@@ -21,7 +21,7 @@ class ExpItem extends Component {
                     <div></div>
                     <div className="exp-position">{this.props.expPosition3}</div>
                     <span className="exp-dates">{this.props.expDate3}</span>
-                    <div className="exp-content">{this.props.expContent}</div>
+                    {/* <div className="exp-content">{this.props.expContent}</div> */}
                 </div>
             </div>
         )

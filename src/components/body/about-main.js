@@ -1,6 +1,7 @@
 // PACKAGES
 import React, { Component } from 'react'
 import TransitionGroup from 'react-addons-transition-group'
+import { TweenMax, Power2, Elastic, TimelineLite } from "gsap"
 // CSS
 import "./body-main.css"
 import "./about-main.css"
@@ -47,30 +48,40 @@ class AboutMain extends Component {
         })
     }
 
+    componentWillEnter (callback) {
+        // TweenMax.staggerTo('.matester', 1, {rotation:360, y:100}, 0.5);
+    }
+
+    componentDidMount() {
+        TweenMax.staggerTo('.matester', 1, {y:100, delay: .5, ease: Power2.easeIn}, 0.2)
+        // TweenMax.to('.tester', 1, {css: {maxHeight: 500}});
+    }
 
     render() {
         return(
             <div className="body-frame">
                 <div className="header-background-fix"></div>
                 <div className="col-10 content-frame">
+                    <div className="body-title">
                         
-            
-                        
-                    <div className="row">
-                        <div className="col">
-                            <h2 className="section-header sh-small" onClick={(category) => this.handleCategoryClick('aboutMeContainer')} style={{cursor:'pointer'}}>About Me +</h2>
+                    {/* <TransitionGroup> */}
+                        <div className="row">
+                            <div className="col matester">
+                                <h2 className="section-header sh-small" onClick={(category) => this.handleCategoryClick('aboutMeContainer')} style={{cursor:'pointer'}}>About Me +</h2>
+                            </div>
+                            <div className="col matester">
+                                <h2 className="section-header sh-small" onClick={(category) => this.handleCategoryClick('aboutMeTechContainer')} style={{cursor:'pointer'}}>About Me Tech +</h2>
+                            </div>
+                            <div className="col matester">
+                                <h2 className="section-header sh-small" onClick={(category) => this.handleCategoryClick('expContainer')} style={{cursor:'pointer'}}>previous experience +</h2>
+                            </div>
+                            <div className="col matester">
+                                <h2 className="section-header sh-small" onClick={(category) => this.handleCategoryClick('eduContainer')} style={{cursor:'pointer'}}>education +</h2>
+                            </div>
                         </div>
-                        <div className="col">
-                            <h2 className="section-header sh-small" onClick={(category) => this.handleCategoryClick('aboutMeTechContainer')} style={{cursor:'pointer'}}>About Me Tech +</h2>
-                        </div>
-                        <div className="col">
-                            <h2 className="section-header sh-small" onClick={(category) => this.handleCategoryClick('expContainer')} style={{cursor:'pointer'}}>previous experience +</h2>
-                        </div>
-                        <div className="col">
-                            <h2 className="section-header sh-small" onClick={(category) => this.handleCategoryClick('eduContainer')} style={{cursor:'pointer'}}>education +</h2>
-                        </div>
-                    </div>
+                    {/* </TransitionGroup> */}
 
+                    </div>
 
                     <TransitionGroup>
                         { this.state.aboutMeContainer && <AboutMe /> }
