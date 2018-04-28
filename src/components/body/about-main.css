@@ -24,13 +24,30 @@
     /* background-image:url(mountain.png); */
 }
 .category-main.collapsed {
-    max-width: 70px;
+    background: #9E453D;
+    width: 60px;
+    min-width: 60px;
+}
+.category-main-selected {
+    margin: 3px 5px;;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: default !important;
+    pointer-events: none;
 }
 .collapsed > h2 {
     width: 1em;
     font-size: 40px;
     letter-spacing: 40px;
     line-height: 40px;
+    padding-left: 5px;
+}
+
+.hidden {
+    display: none;
+}
+.shown {
+    display: block;
 }
 
 
