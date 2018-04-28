@@ -10,7 +10,7 @@ let dbc = dbcEduData()
 let su = suData()
 let msu = msuData()
 
-class EduAnimation extends Component {
+class Education extends Component {
 
     componentWillEnter (callback) {
       // const el = this.container
@@ -45,7 +45,7 @@ class EduAnimation extends Component {
     }
   } 
 
-export default EduAnimation
+export default Education
 
 
 // TweenMax.fromTo(two, 0.4, {x: 300, opacity: 0}, {x: 0, opacity: 1, onComplete: callback});

@@ -10,7 +10,7 @@ let trilogyNW = trilogyNWData()
 let devBootcampExp = devBootcampExpData()
 let cci = cciData()
 
-class ExpAnimation extends Component {
+class Experience extends Component {
     componentWillEnter (callback) {
       const el = this.container;
       TweenMax.fromTo(el, 0.8, {y: 300, opacity: 0}, {y: 0, opacity: 1, onComplete: callback});
@@ -32,4 +32,4 @@ class ExpAnimation extends Component {
     }
   } 
 
-export default ExpAnimation
+export default Experience

@@ -1,13 +1,13 @@
 // PACKAGES
 import React, { Component } from 'react'
 // CSS
-import "./about-me.css"
+import "./life.css"
 // IMAGES
 import tr_garmisch from "../../../images/photos/tr_garmisch.jpg"
 import tr_oregon from "../../../images/photos/tr_oregon.jpg"
 import tr_wrigley from "../../../images/photos/tr_wrigley.jpg"
 
-class AboutMe extends Component {
+class Life extends Component {
 
     render() {
         return(
@@ -51,4 +51,4 @@ class AboutMe extends Component {
     } 
 }
 
-export default AboutMe
+export default Life

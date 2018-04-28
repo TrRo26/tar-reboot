@@ -1,10 +1,10 @@
 // PACKAGES
 import React, { Component } from 'react'
 // CSS
-import "./about-me-tech.css"
+import "./technology.css"
 // IMAGES
 
-class AboutMeTech extends Component {
+class Technology extends Component {
 
     render() {
         return(
@@ -24,4 +24,4 @@ class AboutMeTech extends Component {
     }
 }
 
-export default AboutMeTech
+export default Technology
