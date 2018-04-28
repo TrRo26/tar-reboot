@@ -10,16 +10,16 @@ import linkedin from "../../images/linkedin_icon.png"
 import github from "../../images/github_icon.png"
 import email from "../../images/email_icon.png"
 // COMPONENTS
+import Life from "../content/about/life.js"
+import Technology from "../content/about/technology.js"
+import Experience from "../content/about/experience.js"
+    import ExpItem from "../content/about/exp-item.js"
+    import {powerReviewsData, trilogyNWData, devBootcampExpData, cciData} from "../content/about/experience-data.js"
+import Education from "../content/about/education.js"
+    import EduItem from "../content/about/edu-item.js"
+    import {devBootcampEduData, stockholmUniData, msuData} from "../content/about/education-data.js"
 import Contact from "../contact.js"
-import AboutMe from "../content/about/about-me.js"
-import AboutMeTech from "../content/about/about-me-tech.js"
-import ExpItem from "../content/about/exp-item.js"
-import EduItem from "../content/about/edu-item.js"
-    // import SkillItem from "../content/about/skill-item.js"
-import {powerReviewsData, trilogyNWData, devBootcampExpData, cciData} from "../content/about/experience-data.js"
-import {devBootcampEduData, stockholmUniData, msuData} from "../content/about/education-data.js"
-import ExpAnimation from "../content/about/exp-animation.js"
-import EduAnimation from "../content/about/edu-animation.js"
+// import SkillItem from "../content/about/skill-item.js"
 
 // info on separating imports and exports: https://stackoverflow.com/questions/29722270/import-modules-from-files-in-directory
 // ==================================================================
@@ -34,17 +34,17 @@ class AboutMain extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            aboutMeContainer: true,
-            aboutMeTechContainer: false,
-            expContainer: false,
-            eduContainer: false,
+            aboutContainer: "",
+            aboutTechContainer: "",
+            expContainer: "",
+            eduContainer: "",
         }
     }
 
     handleCategoryClick(category) {
-        Object.keys(this.state).forEach(v => this.state[v] = false)
+        Object.keys(this.state).forEach(v => this.state[v] = 'collapsed')
         this.setState({
-            [category]: !this.state[category]
+            [category]: 'expanded'        //!this.state[category]
         })
     }
 
@@ -53,8 +53,9 @@ class AboutMain extends Component {
     }
 
     componentDidMount() {
-        TweenMax.staggerTo('.matester', 1, {y:100, delay: .5, ease: Power2.easeIn}, 0.2)
+        // TweenMax.staggerTo('.matester', 1, {y:100, delay: .5, ease: Power2.easeIn}, 0.2)
         // TweenMax.to('.tester', 1, {css: {maxHeight: 500}});
+        TweenMax.staggerFrom('.category-main', 2, {height: 0, transformOrigin: "bottom", delay: 0.5, ease: Power2.easeOut}, 0.2);
     }
 
     render() {
@@ -64,37 +65,31 @@ class AboutMain extends Component {
                 <div className="col-10 content-frame">
                     <div className="body-title">
                         
-                    {/* <TransitionGroup> */}
-                        <div className="row">
-                            <div className="col matester">
-                                <h2 className="section-header sh-small" onClick={(category) => this.handleCategoryClick('aboutMeContainer')} style={{cursor:'pointer'}}>About Me +</h2>
+                        <div className="row the-main-container">
+                            <div className={'col category-main ' + this.state.aboutContainer} onClick={(category) => this.handleCategoryClick('aboutContainer')} style={{cursor:'pointer'}}>
+                                <h2>a b o u t</h2>
                             </div>
-                            <div className="col matester">
-                                <h2 className="section-header sh-small" onClick={(category) => this.handleCategoryClick('aboutMeTechContainer')} style={{cursor:'pointer'}}>About Me Tech +</h2>
+                            <div className={'col category-main ' + this.state.aboutTechContainer} onClick={(category) => this.handleCategoryClick('aboutTechContainer')} style={{cursor:'pointer'}}>
+                                <h2 className="">t e c h n o l o g y</h2>
                             </div>
-                            <div className="col matester">
-                                <h2 className="section-header sh-small" onClick={(category) => this.handleCategoryClick('expContainer')} style={{cursor:'pointer'}}>previous experience +</h2>
+                            <div className={'col category-main ' + this.state.expContainer} onClick={(category) => this.handleCategoryClick('expContainer')} style={{cursor:'pointer'}}>
+                                <h2 className="">e x p e r i e n c e</h2>
                             </div>
-                            <div className="col matester">
-                                <h2 className="section-header sh-small" onClick={(category) => this.handleCategoryClick('eduContainer')} style={{cursor:'pointer'}}>education +</h2>
+                            <div className={'col category-main ' + this.state.eduContainer} onClick={(category) => this.handleCategoryClick('eduContainer')} style={{cursor:'pointer'}}>
+                                <h2 className="">e d u c a t i o n</h2>
                             </div>
                         </div>
-                    {/* </TransitionGroup> */}
 
                     </div>
 
                     <TransitionGroup>
-                        { this.state.aboutMeContainer && <AboutMe /> }
-                        { this.state.aboutMeTechContainer && <AboutMeTech /> }
-                        { this.state.expContainer && <ExpAnimation /> }
-                        { this.state.eduContainer && <EduAnimation /> }
+                        { this.state.aboutContainer && <Life /> }
+                        { this.state.aboutTechContainer && <Technology /> }
+                        { this.state.expContainer && <Experience /> }
+                        { this.state.eduContainer && <Education /> }
                     </TransitionGroup>
                         
-                        
                     {/* <ExpItem {...powerReviews} /> */}
-                        
-                        
-                      
                 </div>
 
                 <div className="contact-icons">
