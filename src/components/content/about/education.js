@@ -2,8 +2,10 @@
 import React, { Component } from 'react'
 import TransitionGroup from 'react-addons-transition-group'
 import { TweenMax, Power2, TimelineLite } from "gsap"
+// CSS
+import "./education.css"
 // COMPONENTS
-import EduItem from "./edu-item.js"
+import EducationItem from "./education-item.js"
 import { msuData, suData, dbcEduData } from "./education-data.js"
 
 let dbc = dbcEduData()
@@ -29,23 +31,24 @@ class Education extends Component {
     }
   
     render () {
-      return ( 
-        <div> 
-          <div className="exp-animation" >
-            <EduItem {...dbc} />
-          </div>
-          <div className="exp-animation" >
-            <EduItem {...su} />
-          </div>
-          <div className="exp-animation" >
-            <EduItem {...msu} />
-          </div>
-        </div>
-      )
-    }
-  } 
+      	return ( 
+			<div className="inner-container"> 
+				<div className="exp-animation" >
+					<EducationItem {...dbc} />
+				</div>
+        <span className="plain-divider"></span>
+				<div className="exp-animation" >
+					<EducationItem {...su} />
+				</div>
+        <span className="plain-divider"></span>
+				<div className="exp-animation" >
+					<EducationItem {...msu} />
+				</div>
+			</div>
+		)
+	}
+} 
 
 export default Education
-
 
 // TweenMax.fromTo(two, 0.4, {x: 300, opacity: 0}, {x: 0, opacity: 1, onComplete: callback});

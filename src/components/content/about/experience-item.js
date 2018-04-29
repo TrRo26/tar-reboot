@@ -1,9 +1,9 @@
 // PACKAGES
 import React, { Component } from 'react'
 // CSS
-import "./exp-item.css"
+import "./experience-item.css"
 
-class ExpItem extends Component {
+class ExperienceItem extends Component {
 
     render() {
         return(
@@ -28,4 +28,4 @@ class ExpItem extends Component {
     } 
 }
 
-export default ExpItem
+export default ExperienceItem
