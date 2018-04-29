@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import "./edu-item.css"
+import "./education-item.css"
 
-class EduItem extends Component {
+class EducationItem extends Component {
 
     render() {
         return( 
@@ -18,4 +18,4 @@ class EduItem extends Component {
     } 
 }
 
-export default EduItem
+export default EducationItem

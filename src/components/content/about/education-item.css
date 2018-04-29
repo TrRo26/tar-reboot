@@ -3,19 +3,20 @@
     padding-top: 18px;
     margin-bottom: 50px;
     height: 140px;
-    background: #9E453D;
-    color: #DDD9D4;
+    background: #f7f5e6;
 }
 .edu-seal { 
     position: absolute;
-    left: 20px;
-    margin-top: -18px;
+    /* left: 20px; */
+    margin-left: 15px;
+    margin-top: -10px;
 	height: 70px;
 	width: 70px;
     margin-bottom: 20px;
     padding: 10px;
 }
 .edu-institute {
+    color: #af473c;
     text-align: left;
     font-size: 28px;
     padding-left: 100px;
@@ -26,8 +27,8 @@
 	position: absolute;
 	font-size: 20px;
 	font-variant: small-caps;
-    right: 45px;
-    margin-top: -50px;
+    right: 70px;
+    margin-top: -54px;
 }
 .edu-degree {
     text-align: left;
@@ -35,6 +36,7 @@
 	font-size: 16px;
     font-weight: 700;
     margin-bottom: 5px;
+    margin-top: -10px;
 }
 .edu-department {
     text-align: left;

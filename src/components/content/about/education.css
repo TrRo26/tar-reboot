@@ -1,0 +1,11 @@
+.plain-divider {
+    display:block;
+    position:absolute;
+    margin-top: -28px;
+    width: 440px;
+    height: 1px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: grey;
+}

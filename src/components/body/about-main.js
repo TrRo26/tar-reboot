@@ -13,10 +13,8 @@ import email from "../../images/email_icon.png"
 import Life from "../content/about/life.js"
 import Technology from "../content/about/technology.js"
 import Experience from "../content/about/experience.js"
-    import ExpItem from "../content/about/exp-item.js"
     import {powerReviewsData, trilogyNWData, devBootcampExpData, cciData} from "../content/about/experience-data.js"
 import Education from "../content/about/education.js"
-    import EduItem from "../content/about/edu-item.js"
     import {devBootcampEduData, stockholmUniData, msuData} from "../content/about/education-data.js"
 import Contact from "../contact.js"
 // import SkillItem from "../content/about/skill-item.js"
@@ -52,7 +50,7 @@ class AboutMain extends Component {
         // x.classList.add("active")
         TweenMax.to(".shown", 0, {css: {className: "hidden"}})
         // TweenMax.to("#" + showHide, 1, {css: {className: "shown"}, delay: 1})
-        TweenMax.set("#" + showHide, {css: {className: "shown"}, delay: 1.2})
+        TweenMax.set("#" + showHide, {css: {className: "shown"}, delay: 1.1})
     }
 
     componentDidUpdate() {
@@ -70,6 +68,10 @@ class AboutMain extends Component {
         // TweenMax.to('.tester', 1, {css: {maxHeight: 500}})
         TweenMax.staggerFrom('.category-main', 2, {height: 0, transformOrigin: "bottom", delay: 0.5, ease: Power2.easeOut}, 0.2)
     }
+
+//     <div className="card-image-container">
+//          <img src={data.postMainImage} alt={"Imagine a beautiful picture here"} className="card-image"/>
+//      </div>
 
     render() {
         return(
@@ -97,7 +99,7 @@ class AboutMain extends Component {
                                     <Experience />
                                 </div>
                             </div>
-                            <div className={"col category-main" + this.state.eduContainer} onClick={(category) => this.handleCategoryClick('eduContainer', 'education')} style={{cursor:'pointer'}}>
+                            <div className={"col education category-main" + this.state.eduContainer} onClick={(category) => this.handleCategoryClick('eduContainer', 'education')} style={{cursor:'pointer'}}>
                                 <h2>e d u c a t i o n</h2>
                                 <div id="education" className="hidden">
                                     <Education />

@@ -1,15 +1,14 @@
 .exp-container {
     border-radius: 5px;
-    padding-top: 30px;
-    margin-bottom: 30px;
-    border: 1px solid black;
+    /* padding-top: 30px; */
+    margin-bottom: 60px;
+    /* border: 1px solid black; */
     /* background: #DDD9D4; */
     color: black;
 }
 .exp-icon {
     position: absolute;
-    left: 20px;
-    margin-top: -18px;
+    margin-top: -8px;
 	height: 70px;
 	width: 70px;
     margin-bottom: 20px;
@@ -20,14 +19,16 @@
     font-size: 28px;
     padding-left: 85px;
 	font-variant: small-caps;
-	margin-bottom: 20px;
+    margin-bottom: 20px;
+    color: #af473c;
+    font-weight: bold;
 }
 .exp-location {
 	position: absolute;
 	font-size: 20px;
 	font-variant: small-caps;
     right: 45px;
-    margin-top: -50px;
+    margin-top: -55px;
 }
 .exp-position {
     text-align: left;
@@ -39,7 +40,7 @@
 	position: absolute;
 	font-size: 16px;
     right: 45px;
-    margin-top: -24px;
+    margin-top: -31px;
 }
 .exp-content {
     margin-top: 30px;

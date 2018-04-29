@@ -1,9 +1,9 @@
 .skill {
     margin-bottom: 60px;
 }
-.expanded-false {
+/* .expanded-false {
     display: none;
-}
+} */
 .box {
     position: absolute;
     border: 5px solid black;
@@ -15,22 +15,31 @@
     top: 75px;
     overflow: hidden;
 }
+.inner-container {
+    padding: 25px 35px;
+}
 .category-main {
-    margin: 3px;
+    margin: 0px 3px;
     height:700px;
-    background: #9E453D;
+    background: #af473c;
     color: white;
     border-radius: 10px;
-    /* background-image:url(mountain.png); */
+}
+.education {
+    background-image: url(../../images/photos/category-edu.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.category-main > h2 {
+    font-size: 24px;
 }
 .category-main.collapsed {
-    background: #9E453D;
+    background: #af473c;
     width: 60px;
     min-width: 60px;
 }
 .category-main-selected {
     margin: 3px 5px;;
-    border: 1px solid black;
     border-radius: 10px;
     cursor: default !important;
     pointer-events: none;
@@ -42,7 +51,6 @@
     line-height: 40px;
     padding-left: 5px;
 }
-
 .hidden {
     display: none;
 }
