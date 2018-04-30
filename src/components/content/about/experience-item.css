@@ -1,10 +1,8 @@
 .exp-container {
+    padding: 20px;
     border-radius: 5px;
-    /* padding-top: 30px; */
-    margin-bottom: 60px;
-    /* border: 1px solid black; */
-    /* background: #DDD9D4; */
-    color: black;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .exp-icon {
     position: absolute;
@@ -27,7 +25,7 @@
 	position: absolute;
 	font-size: 20px;
 	font-variant: small-caps;
-    right: 45px;
+    right: 75px;
     margin-top: -55px;
 }
 .exp-position {
@@ -39,7 +37,7 @@
 .exp-dates {
 	position: absolute;
 	font-size: 16px;
-    right: 45px;
+    right: 75px;
     margin-top: -31px;
 }
 .exp-content {

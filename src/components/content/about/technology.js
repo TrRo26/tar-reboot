@@ -12,7 +12,7 @@ class Technology extends Component {
 		TweenMax.fromTo(".para-one-drift", 2, {opacity: 0}, {opacity: 1})
 		TweenMax.fromTo(".para-two-drift", 3, {y: 30, x: 20}, {y: 10, x: 0})
         TweenMax.fromTo(".para-two-drift", 2, {opacity: 0}, {opacity: 1})
-        TweenMax.fromTo(".tech-list", 1, {opacity: 0}, {opacity: 1, delay: 3})
+        TweenMax.fromTo(".tech-list", 1, {opacity: 0}, {opacity: 1, delay: 2})
     }
 
     render() {
