@@ -6,6 +6,7 @@
     text-align: center;
     padding: 0px;
     cursor: pointer;
+    border-radius: 25px;
 }
 .card-image-container {
     height: 100%;
@@ -19,6 +20,7 @@
 }
 .card-heading-container {
     color: #3F3E3C;
+    background: floralwhite;
     float: right;
     position: relative;
     height: 100%;

@@ -13,7 +13,7 @@
 .the-main-container {
     position: relative;
     top: 75px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .inner-container {
     padding: 25px 35px;
@@ -25,18 +25,52 @@
     color: white;
     border-radius: 10px;
 }
+.icons-main {
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    /* border: 1px solid black; */
+    width: 800px;
+    margin: auto;
+    padding-top: 75px;
+}
+.icons-main > img {
+    height: 100px;
+    width: auto;
+    text-align : center;
+}
+.category-name-display {
+    display: flex;
+    width: 500px;
+    margin: auto;
+    margin-top: 65px;
+    justify-content: center;
+    font-size: 40px;
+    border: 3px solid #af473c;
+    color: #af473c;
+}
+/* #life {
+    position: absolute;
+    top: 50px;
+}
 .education {
     background-image: url(../../images/photos/category-edu.jpg);
     background-size: cover;
     background-position: center;
-}
+} */
 .category-main > h2 {
     font-size: 24px;
 }
 .category-main.collapsed {
-    background: #af473c;
+    /* background: #efedce; */
     width: 60px;
     min-width: 60px;
+    background: linear-gradient(
+        to bottom, 
+        #9cb8b3 0%,
+        #efedce 10%, 
+        #9cb8b3 80%
+      );
 }
 .category-main-selected {
     margin: 3px 5px;;
@@ -44,6 +78,9 @@
     cursor: default !important;
     pointer-events: none;
 }
+/* .category-main-expanded {
+    width: 500px;
+} */
 .collapsed > h2 {
     width: 1em;
     font-size: 40px;
@@ -64,3 +101,5 @@ Red - #9E4443, #9E453D (current), #984843
 Charcoal - #3E3E3E, #3C413D, #3F3E3C (current), #40403A, #423C38
 White - #D4E2D0, #CEE1CD, #DDD9D4 (current)
  */
+
+ /* #af473c; */

@@ -1,7 +1,7 @@
 // PACKAGES
 import React, { Component } from 'react'
-import TransitionGroup from 'react-addons-transition-group'
-import { TweenMax, Power2, TimelineLite } from "gsap"
+// import TransitionGroup from 'react-addons-transition-group'
+import { TweenMax, Power3 } from "gsap"
 // CSS
 import "./education.css"
 // COMPONENTS
@@ -14,34 +14,31 @@ let msu = msuData()
 
 class Education extends Component {
 
-    componentWillEnter (callback) {
-      // const el = this.container
-      // const one = this.containerOne
-      // const two = this.containerTwo
-      // const three = this.containerThree
-    
-      TweenMax.staggerTo('.exp-animation', 1, {rotation:360, y:100}, 0.5)
-      // TweenMax.fromTo(one, 1.4, {opacity: 0}, {opacity: 1, onComplete: callback});
-      // TweenMax.fromTo(two, 1.8, {opacity: 0}, {opacity: 1, onComplete: callback});
+    componentDidMount(callback) {    
+		TweenMax.fromTo(".dbc-drift", 5, {y: -20}, {y: 0})
+		TweenMax.fromTo(".dbc-drift", 2, {opacity: 0}, {opacity: 1})
+		TweenMax.fromTo(".su-drift", 5, {y: 5}, {y: 0})
+		TweenMax.fromTo(".su-drift", 2, {opacity: 0}, {opacity: 1})
+		TweenMax.fromTo(".msu-drift", 5, {y: 20}, {y: 0})
+		TweenMax.fromTo(".msu-drift", 2, {opacity: 0}, {opacity: 1})
     }
   
-    componentWillLeave (callback) {
-      // const el = this.container;
-      // TweenMax.fromTo('.exp-animation', 0.8, {x: 0, opacity: 1}, {x: 300, opacity: 0, onComplete: callback});
+    componentWillLeave(callback) {
+	
     }
   
     render () {
       	return ( 
 			<div className="inner-container"> 
-				<div className="exp-animation" >
+				<div className="edu-animation dbc-drift">
 					<EducationItem {...dbc} />
 				</div>
-        <span className="plain-divider"></span>
-				<div className="exp-animation" >
+    		    {/* <span className="plain-divider"></span> */}
+				<div className="edu-animation su-drift">
 					<EducationItem {...su} />
 				</div>
-        <span className="plain-divider"></span>
-				<div className="exp-animation" >
+        		{/* <span className="plain-divider"></span> */}
+				<div className="edu-animation msu-drift">
 					<EducationItem {...msu} />
 				</div>
 			</div>
@@ -50,5 +47,3 @@ class Education extends Component {
 } 
 
 export default Education
-
-// TweenMax.fromTo(two, 0.4, {x: 300, opacity: 0}, {x: 0, opacity: 1, onComplete: callback});
