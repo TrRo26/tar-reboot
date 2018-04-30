@@ -1,6 +1,5 @@
 // PACKAGES
 import React, { Component } from "react"
-import TransitionGroup from "react-addons-transition-group"
 import { TweenMax, Power2 } from "gsap"
 // CSS
 import "./body-main.css"
@@ -30,7 +29,7 @@ class AboutMain extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            categoryName: null,
+            categoryName: "life",
             component: <Life />
         }
     }
@@ -44,6 +43,7 @@ class AboutMain extends Component {
                 component: comp
             })
             TweenMax.to("#" + category, 1, {y: -15})
+            // TweenMax.fromTo(".category-name-display", 0.5, {css: {height: 0}}, {css: {height: 100}})
         }
     }
 
@@ -98,11 +98,11 @@ class AboutMain extends Component {
                     </div>
                 </div>
 
-                <div className="contact-icons">
+                {/* <div className="contact-icons">
                     <Contact icon={linkedin} iconLink={'https://www.linkedin.com/in/travisroy'}/>
                     <Contact icon={github} iconLink={'https://github.com/TrRo26'}/>
                     <Contact icon={email} iconLink={'mailto:travis.roy26@gmail.com'}/>
-                </div>
+                </div> */}
 
             </div>
         )

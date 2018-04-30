@@ -30,15 +30,15 @@ class Education extends Component {
     render () {
       	return ( 
 			<div className="inner-container"> 
-				<div className="edu-animation dbc-drift">
+				<div className="dbc-drift">
 					<EducationItem {...dbc} />
 				</div>
     		    {/* <span className="plain-divider"></span> */}
-				<div className="edu-animation su-drift">
+				<div className="su-drift">
 					<EducationItem {...su} />
 				</div>
         		{/* <span className="plain-divider"></span> */}
-				<div className="edu-animation msu-drift">
+				<div className="msu-drift">
 					<EducationItem {...msu} />
 				</div>
 			</div>
