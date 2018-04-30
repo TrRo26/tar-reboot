@@ -1,5 +1,6 @@
 // PACKAGES
 import React, { Component } from 'react'
+import { TweenMax } from "gsap"
 // CSS
 import "./life.css"
 // IMAGES
@@ -9,12 +10,19 @@ import tr_wrigley from "../../../images/photos/tr_wrigley.jpg"
 
 class Life extends Component {
 
+    componentDidMount(callback) {    
+		TweenMax.fromTo(".para-one-drift", 4, {y: -30, x: 20}, {y: -10, x: 0})
+		TweenMax.fromTo(".para-one-drift", 2, {opacity: 0}, {opacity: 1, delay: 0.2})
+		TweenMax.fromTo(".para-two-drift", 4, {y: 30, x: -20}, {y: 10, x: 0})
+        TweenMax.fromTo(".para-two-drift", 2, {opacity: 0}, {opacity: 1, delay: 0.2})
+    }
+
     render() {
         return(
             <div>
                 <div className="inner-container">
-                    <p>As a result of several years of intense interest in the field of web development and a strong desire to build and create, I recently attended and graduated from the fully immersive web development program at DevBootcamp in Chicago. Working and studying approximately 60 hours per week, I had the opportunity to build numerous programs utilizing Ruby, Rails, HTML, CSS, JavaScript, JQuery, Sinatra, Xcode, Swift, SQL, and many other development tools.</p>
-                    <p>In addition to my current studies at DevBootcamp, I have recently earned a Master's of Science in International and Comparative Education as a result of my intense interest in culture, all things international and, of course, education. I am highly organized and pride myself on the ability to do just about anything and do it well.</p>
+                    <p className="para-one-drift">As a result of several years of intense interest in the field of web development and a strong desire to build and create, I recently attended and graduated from the fully immersive web development program at DevBootcamp in Chicago. Working and studying approximately 60 hours per week, I had the opportunity to build numerous programs utilizing Ruby, Rails, HTML, CSS, JavaScript, JQuery, Sinatra, Xcode, Swift, SQL, and many other development tools.</p>
+                    <p className="para-two-drift">In addition to my current studies at DevBootcamp, I have recently earned a Master's of Science in International and Comparative Education as a result of my intense interest in culture, all things international and, of course, education. I am highly organized and pride myself on the ability to do just about anything and do it well.</p>
                     
                     {/* <div className="image-collection">    
                         <img src={tr_garmisch} className="thumb" data-toggle="modal" data-target=".modal-one" />
