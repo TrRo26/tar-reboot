@@ -14,7 +14,7 @@ class HeaderMain extends Component {
         return(
             <header className="header-frame">
                 <div className="overlay"></div>
-                <img src={lofoten} alt={"lofoten.jpg"} className="header-img"/>
+                {/* <img src={lofoten} alt={"lofoten.jpg"} className="header-img"/> */}
                 <span className="me">TRAVIS A. ROY</span>
                 <div className="page-links">
                     <NavLink path="/" name={"about"} />

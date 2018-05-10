@@ -26,9 +26,24 @@ export class PostsGrid extends Component {
     //         currentPostPath: path
     //     }))
     // }
+
+    // filterPostsByTag(selectedTag) {
+    //     var posts = Object.values(this.props.catalog)
+    //     var filteredPosts = []
+    //     for (var post in posts) {
+    //         var postInfo = posts[post]
+    //         console.log(postInfo)
+    //         if (postInfo.postTags[0] === selectedTag) {
+    //             filteredPosts.push(post)
+    //         }
+    //     }
+    //     console.log(filteredPosts)
+    //     // return filteredPosts
+    // }
     
     render() {
         var allPosts = Object.values(this.props.catalog)
+        // this.filterPostsByTag("travel")
 
         return(
             <div className="posts-grid-container">
