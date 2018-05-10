@@ -1,6 +1,6 @@
-.header-frame {
+/* .header-frame {
     height: 250px;
-    max-height: 155px; /* previously 155px */
+    max-height: 155px;
     overflow: hidden;
 }
 .header-img {
@@ -15,19 +15,19 @@
     right: -9999px;
     margin: auto;
     z-index: -99;
-}
-.overlay {
+} */
+/* .overlay {
     position: absolute;
     width: 100%;
     height: 300px;
     top: 0px;
-    left: 0px;
+    left: 0px; */
 	/* max-width: 100%; */
 	/* min-width: 1440px; */
-    background: rgba(90, 80, 80, 0.65);  /*70, 72, 82, 0.3*/
-    z-index: -98;
-}
-.page-links {
+    /* background: rgba(90, 80, 80, 0.65);  70, 72, 82, 0.3 */
+    /* z-index: -98; */
+/* } */
+/* .page-links {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -39,10 +39,4 @@
 }
 .me {
     font-size: 80px;
-}
-
-/* 
-Red - #9E4443, #9E453D (current), #984843
-Charcoal - #3E3E3E, #3C413D, #3F3E3C (current), #40403A, #423C38
-White - #D4E2D0, #CEE1CD, #DDD9D4 (current)
- */
+} */
