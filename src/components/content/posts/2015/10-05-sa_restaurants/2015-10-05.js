@@ -39,6 +39,7 @@ class SARestaurants extends Component {
     render() {
         var data = this.postData()
         const endUrl = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
+        console.log("DID IT WORK???????: " + this.props.tagalag)
 
         if (endUrl != data.postPath) {
             return(
@@ -187,7 +188,9 @@ class SARestaurants extends Component {
                     </div>
                 </div>
             )
-        } 
+        } else {
+            return null
+        }
     } 
 }
 

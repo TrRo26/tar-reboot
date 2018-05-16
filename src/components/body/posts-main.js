@@ -12,9 +12,10 @@ import SARestaurants from "../content/posts/2015/10-05-sa_restaurants/2015-10-05
 import MoroccanIngenuity from "../content/posts/2015/05-16-moroccan_ingenuity/2015-05-16.js"
 
 const componentsCatalog = {
-    "shadow-wind": <ShadowWind />,
-    "stockholm-restaurants": <SARestaurants />,
-    "moroccan-ingenuity": <MoroccanIngenuity />,
+    "tags": "",
+    "shadow-wind": <ShadowWind tagalag={this.tags} />,
+    "stockholm-restaurants": <SARestaurants tagalag={this.tags} />,
+    "moroccan-ingenuity": <MoroccanIngenuity tagalag={this.tags} />,
 }
 
 class PostsMain extends Component {
@@ -50,6 +51,9 @@ class PostsMain extends Component {
     //     )
     //     this.props.history.push("/posts/shadow-wind")
     // }
+    handleButtonClick(e) {
+        componentsCatalog.tags = e.target.textContent
+    }
 
     render() {
         const url = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
@@ -58,9 +62,14 @@ class PostsMain extends Component {
             <div className="body-frame">
                 <div className="header-background-fix"></div>
                     <div className="right-sidebar">
-                        <p className="archives">archives:</p>
-                        <p>2015</p>
-                        <p>2018</p>
+                        <p>FILTER BY:</p>
+                        <p className="tag-title">year:</p>
+                        <p><button>2015</button></p>
+                        <p><button>2018</button></p>
+                        <p className="tag-title">tag:</p>
+                        <p><button onClick={this.handleButtonClick}>food</button></p>
+                        <p><button onClick={this.handleButtonClick}>literature</button></p>
+                        <p><button onClick={this.handleButtonClick}>travel</button></p>
                     </div>
                     <div className="col-10 content-frame">
                         <div className="body-title">
