@@ -28,17 +28,23 @@ export class PostsGrid extends Component {
     // }
 
     // filterPostsByTag(selectedTag) {
-    //     var posts = Object.values(this.props.catalog)
+    //     var posts = this.props.catalog
     //     var filteredPosts = []
     //     for (var post in posts) {
+    //         console.log("posts: " + JSON.stringify(posts))
+    //         console.log("post: " + post)
     //         var postInfo = posts[post]
-    //         console.log(postInfo)
-    //         if (postInfo.postTags[0] === selectedTag) {
+    //         console.log("THIS HERE: " + JSON.stringify(postInfo))
+    //         if (postInfo.postTags === selectedTag) {
     //             filteredPosts.push(post)
     //         }
     //     }
     //     console.log(filteredPosts)
     //     // return filteredPosts
+    // }
+
+    // componentDidMount() {
+    //     this.filterPostsByTag("travel")
     // }
     
     render() {
