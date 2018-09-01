@@ -20,13 +20,15 @@
 }
 .card-heading-container {
     color: #3F3E3C;
-    background: floralwhite;
+    background: white;
     float: right;
     position: relative;
     height: 100%;
     max-width: 40%;
     padding: 10px;
 }
+/* previously floralwhite; */
+
 .card-title {
     font-weight: 900;
     padding-top: 20px;
