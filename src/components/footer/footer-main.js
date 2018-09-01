@@ -5,10 +5,10 @@ class FooterMain extends Component {
 
     render() {
         return(
-            <div className="footer-frame">
+            <footer className="footer-frame">
                 <p>Created using React, HTML, CSS and a dash of Bootstrap</p>
-                <p>by Travis Roy</p>
-            </div>
+                <p> © 2018 Travis Roy</p>
+            </footer>
         )
     }
 }

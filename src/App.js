@@ -38,13 +38,17 @@ class App extends Component {
 				<div className="main-nav">
 					<HeaderMain />
 				</div>
-				<TransitionGroup>
-				<Route exact path="/" component={AboutMain} />
-				</TransitionGroup>
-				<Route exact path="/projects" component={ProjectsMain} />
-				<Route path="/posts" component={PostsMain} />
-				{/* <Route exact path="/posts/shadow-wind" component={ShadowWind} /> */}
-				<FooterMain />
+				<div className="main-wrapper">
+					<TransitionGroup>
+					<Route exact path="/" component={AboutMain} />
+					</TransitionGroup>
+					{/* <Route exact path="/projects" component={ProjectsMain} /> */}
+					<Route path="/posts" component={PostsMain} />
+					{/* <Route exact path="/posts/shadow-wind" component={ShadowWind} /> */}
+				</div>
+				<div className="footer-main">
+					<FooterMain />
+				</div>
 			</div>
 			</Router>
 		</div>

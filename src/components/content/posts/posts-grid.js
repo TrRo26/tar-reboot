@@ -40,7 +40,7 @@ export class PostsGrid extends Component {
     //         }
     //     }
     //     console.log(filteredPosts)
-    //     // return filteredPosts
+    //     return filteredPosts
     // }
 
     // componentDidMount() {
@@ -49,6 +49,7 @@ export class PostsGrid extends Component {
     
     render() {
         var allPosts = Object.values(this.props.catalog)
+        // var allPosts = Object.values(this.filterPostsByTag("travel"))
         // this.filterPostsByTag("travel")
 
         return(

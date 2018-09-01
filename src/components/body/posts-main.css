@@ -6,14 +6,18 @@
     position: relative;
     float: right;
     margin-top: 100px;
-    right: 0;
+    margin-right: -30px;
 }
 .right-sidebar p {
-    line-height: 10px;
+    line-height: 7px;
 }
 .tag-title {
     letter-spacing: 1px;
     border-bottom: solid 2px #000000;
     padding-bottom: 7px;
     margin: 40px 0px 20px;
+}
+.right-sidebar button {
+    height: 25px;
+    border-radius: 3px;
 }

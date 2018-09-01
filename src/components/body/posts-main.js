@@ -64,8 +64,8 @@ class PostsMain extends Component {
                     <div className="right-sidebar">
                         <p>FILTER BY:</p>
                         <p className="tag-title">year:</p>
-                        <p><button>2015</button></p>
                         <p><button>2018</button></p>
+                        <p><button>2015</button></p>
                         <p className="tag-title">tag:</p>
                         <p><button onClick={this.handleButtonClick}>food</button></p>
                         <p><button onClick={this.handleButtonClick}>literature</button></p>
