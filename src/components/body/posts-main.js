@@ -7,12 +7,14 @@ import "./posts-main.css"
 // COMPONENTS
 import { PostsGrid, Post } from "../content/posts/posts-grid.js"
 // POSTS
-import ShadowWind from '../content/posts/2015/11-21-shadow_wind/2015-11-21'
+import DIYDesk from "../content/posts/2018/09-02-diy_rustic_desk/2018-09-02.js"
+import ShadowWind from "../content/posts/2015/11-21-shadow_wind/2015-11-21.js"
 import SARestaurants from "../content/posts/2015/10-05-sa_restaurants/2015-10-05.js"
 import MoroccanIngenuity from "../content/posts/2015/05-16-moroccan_ingenuity/2015-05-16.js"
 
 const componentsCatalog = {
     "tags": "",
+    "diy-rustic-desk": <DIYDesk tagalag={this.tag} />,
     "shadow-wind": <ShadowWind tagalag={this.tags} />,
     "stockholm-restaurants": <SARestaurants tagalag={this.tags} />,
     "moroccan-ingenuity": <MoroccanIngenuity tagalag={this.tags} />,
