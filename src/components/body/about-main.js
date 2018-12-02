@@ -63,7 +63,7 @@ class AboutMain extends Component {
         return(
             <div className="body-frame">
                 <div className="header-background-fix"></div>
-                <div className="col-12 content-frame">
+                <div className="content-frame">
                     <div className="body-title">
 
                         <div className="icons-main">
@@ -89,8 +89,8 @@ class AboutMain extends Component {
                             {this.state.categoryName}
                         </div>
 
-                        <div className="row the-main-container">    
-                            <div className={"col life category-main" + this.state.lifeContainer}>
+                        <div className="the-main-container">    
+                            <div className={"life category-main" + this.state.lifeContainer}>
                                 {this.state.component}
                             </div>
                         </div>
