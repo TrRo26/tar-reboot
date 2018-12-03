@@ -18,9 +18,8 @@ class Technology extends Component {
     render() {
         return(
             <div className="inner-container">
-                <p className="para-one-drift">My past work with CCI Greenheart in the student exchange industry has provided me with invaluable people skills through day-to-day dealings with a multitude of international and domestic partners, employers and students alike. My formal education has afforded me valuable project management skills, an independent work ethic and an acute understanding of educational design and learning techniques.</p>
-                <p className="para-two-drift">I have also been lucky enough to have had the chance to spend nearly half a year traveling throughout Western and Eastern Europe, a year and a half working and traveling in Australia and New Zealand, and two years studying and working in Sweden for graduate school. I am absolutely fascinated by different cultures and strongly believe that experiencing the differences those cultures have to offer is essential to a healthy perspective in todays world.</p>
-
+                <p className="para-one-drift">As a result of several years of intense interest in the field of web development and a strong desire to build and create, I recently attended and graduated from the fully immersive web development program at DevBootcamp in Chicago. Working and studying approximately 60 hours per week, I had the opportunity to build numerous programs utilizing Ruby, Rails, HTML, CSS, JavaScript, JQuery, Sinatra, Xcode, Swift, SQL, and many other development tools.</p>
+                <p className="para-two-drift">I am currently putting these new skills to good use solving problems as a Technical Support Engineer at PowerReviews.</p>
                 <div className="tech-list">
                     <h3 className="tech-list-header">languages / frameworks</h3>
                     <p className="tech">JavaScript | React | JQuery | Jasmine</p>

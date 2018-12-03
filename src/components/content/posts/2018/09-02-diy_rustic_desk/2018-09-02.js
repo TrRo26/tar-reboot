@@ -58,14 +58,11 @@ class DIYDesk extends Component {
                                     <div className="col-4 post-image-container-all">
                                         <img src={finishedProduct} alt={"Imagine a beautiful picture here"} className="post-image-all post-image-ag"/>
                                         <div className="contact-info-all">
-                                            <p>Kronobergsgatan 37</p>
-                                            <p>112 33 Stockholm</p>
-                                            <p className="contact-info-padding">+46 (8) 41068100</p>
-                                            <a href="http://www.restaurangag.se/?lang=en" target="_blank">website</a>
+                                            <p>Finished Desk</p>
                                         </div>
                                     </div>
                                     <div className="col-8">
-                                        <p className="post-text-ag post-text-all"><span className="restaurant-title">AG </span> Tucked away on the far side of the island of Kungsholmen in the Fridhemsplan area, the unassuming entrance down a quiet side street leads to a set of stairs spiraling up to this hip and modern chophouse. Not for the squeamish, fresh cuts of meat dangle from hooks on the landing as you walk in before being offered the choice of grabbing a drink in the bustling bar area or diving right into their fantastic selection of dishes. Cuts are listed by country of origin and come with that respective nation’s flag perched on top making sampling a few different selections that much more enjoyable. This place sports a fairly comprehensive wine list as well – if you happen to be into dry reds, try the Ribera Del Duero Pedrosa Crianza, it’s relatively inexpensive and nearly impossible to find in the US.</p>
+                                        <p className="post-text-ag post-text-all"></p>
                                     </div>
                                 </div>
 
